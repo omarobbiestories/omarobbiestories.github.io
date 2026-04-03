@@ -1,43 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oma Robbie Stories</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      background: #fffaf4;
+      color: #5a4a42;
+      line-height: 1.7;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #fdeccf, #fdf6ea);
       text-align: center;
-      margin: 40px;
-      background: #fafafa;
+      padding: 70px 20px 50px;
+      border-bottom: 4px solid #f2d8a7;
     }
-    h1 {
-      font-size: 42px;
+
+    .hero h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #8a5a44;
     }
-    p {
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 12px;
+      color: #7a6a5f;
     }
-    .section {
-      margin-top: 40px;
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .intro {
+      background: #fff;
+      border: 2px solid #f2dfbf;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #8a5a44;
+      margin-bottom: 24px;
+      font-size: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 2px solid #f3e3c8;
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      background: #f8efe2;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #7d4f3f;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      margin-bottom: 0;
+    }
+
+    .about {
+      background: #fff7ef;
+      border: 2px solid #f2dfbf;
+      border-radius: 24px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px 20px 50px;
+      color: #8a7a70;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #9a5f4d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Oma Robbie Stories</h1>
-  <p><em>A gentle tale by Robin K</em></p>
+  <section class="hero">
+    <h1>Oma Robbie Stories</h1>
+    <p>A gentle tale by Robin K</p>
+  </section>
 
-  <div class="section">
-    <p>
-      Oma Robbie Stories — a collection of heartfelt storytelling, from a composition on the Mandela Effect and my father’s autobiography to a collection of poetry and a poetry book, children’s stories and videos from my YouTube channel, Oma Robbie Storytime, and my art and murals.
-    </p>
+  <div class="container">
+
+    <section class="intro">
+      <p>
+        Oma Robbie Stories is a collection of heartfelt storytelling, from a composition on the Mandela Effect and my father’s autobiography to poetry, children’s stories and videos from my YouTube channel, Oma Robbie Storytime, along with my art and murals.
+      </p>
+    </section>
+
+    <section>
+      <h2>My Creative World</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="images/childrens-stories.jpg" alt="Children's stories">
+          <h3>Children’s Stories</h3>
+          <p>Gentle stories for little hearts, created with warmth, imagination, and wonder.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/youtube-storytime.jpg" alt="YouTube Storytime">
+          <h3>Oma Robbie Storytime</h3>
+          <p>Story videos and creative moments from my YouTube channel, shared in a soft and welcoming style.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/poetry.jpg" alt="Poetry">
+          <h3>Poetry</h3>
+          <p>A collection of poems and poetic reflections, gathered with feeling and imagination.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/autobiography.jpg" alt="Father's autobiography">
+          <h3>My Father’s Autobiography</h3>
+          <p>A meaningful life story preserved with care, memory, and family love.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/mandela-effect.jpg" alt="Mandela Effect composition">
+          <h3>Mandela Effect Writing</h3>
+          <p>A thoughtful composition exploring memory, mystery, and the fascination of the Mandela Effect.</p>
+        </div>
+
+        <div class="card">
+          <img src="images/art-murals.jpg" alt="Art and murals">
+          <h3>Art &amp; Murals</h3>
+          <p>A gallery of creative expression through art, painting, and mural work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Robin K</h2>
+      <p>
+        Through Oma Robbie Stories, I share stories, poetry, art, and creative works that are close to my heart. This space brings together my writing, children’s storytelling, family history, and visual art in one gentle home.
+      </p>
+    </section>
+
   </div>
 
-  <div class="section">
-    <h2>My Work</h2>
-    <p>Coming soon: stories, videos, and artwork.</p>
-  </div>
+  <footer class="footer">
+    <p>© Oma Robbie Stories</p>
+    <p>YouTube: Oma Robbie Storytime</p>
+  </footer>
 
 </body>
 </html>
+A few important notes:
+Paste that into index.html, not the README.
+The image names are placeholders, so later you’ll upload images into a folder called images with names like:
+childrens-stories.jpg
+youtube-storytime.jpg
+poetry.jpg
+autobiography.jpg
+mandela-effect.jpg
+art-murals.jpg
+
+
+
+
+
 
