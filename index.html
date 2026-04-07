@@ -4,13 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oma Robbie Stories</title>
-     
-  <div style="text-align:center; background:#f5efe6; padding:12px 16px; margin:20px auto; max-width:500px; border-radius:8px;">
-  <p style="margin:0; font-style:bold; color:#7a6a5f;">
-    This little space is still growing — more stories and artwork will appear soon.
-    
-  </p> 
-</div>
+
   <style>
     body {
       margin: 0;
@@ -18,6 +12,17 @@
       background: #fffaf4;
       color: #5a4a42;
       line-height: 1.7;
+    }
+
+    .notice-box {
+      text-align: center;
+      background: #f5efe6;
+      padding: 12px 16px;
+      margin: 20px auto;
+      max-width: 500px;
+      border-radius: 8px;
+      color: #7a6a5f;
+      font-style: italic;
     }
 
     .hero {
@@ -39,26 +44,31 @@
       color: #7a6a5f;
     }
 
-    .container {
-      max-width: 1000px;
+    .intro-section {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
-    .intro {
-      background: #fff;
-      border: 2px solid #f2dfbf;
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-bottom: 40px;
+      padding: 40px 20px 20px;
       text-align: center;
     }
 
-    .intro p {
-      max-width: 760px;
+    .intro-subtitle {
+      font-size: 1.2rem;
+      color: #8a5a44;
+      margin-bottom: 20px;
+    }
+
+    .intro-greeting {
+      margin-top: 0;
+    }
+
+    .closing-lines {
+      margin-top: 24px;
+    }
+
+    .container {
+      max-width: 1000px;
       margin: 0 auto;
-      font-size: 1.05rem;
+      padding: 20px 20px 60px;
     }
 
     h2 {
@@ -143,47 +153,55 @@
 </head>
 <body>
 
+  <div class="notice-box">
+    This little space is still growing — more stories and artwork will appear soon.
+  </div>
+
   <section class="hero">
     <h1>Oma Robbie Stories</h1>
     <p>A gentle tale by Robin K</p>
   </section>
-<div class="intro-section">
-  <p class="intro-subtitle">A collection of heartfelt storytelling</p>
 
-  <p class="intro-greeting"><strong>Hello from Australia,</strong></p>
+  <div class="intro-section">
+    <p class="intro-subtitle">A collection of heartfelt storytelling</p>
 
-  <p>
-    Thank you for your interest in this page.
-  </p>
+    <p class="intro-greeting"><strong>Hello from Australia,</strong></p>
 
-  <p>
-From a composition on the Mandela Effect and my father’s autobiography, through to a collection of my poetry, art, murals, photography, children’s stories, and videos from my YouTube channel.
-  </p>
+    <p>Thank you for your interest in this page.</p>
 
-  <p>
-    The dynamic creativity of the human mind offers us all marvellous, soul-enriching experiences.
-  </p>
+    <p>
+      From a composition on the Mandela Effect and my father’s autobiography,
+      through to a collection of my poetry, art, murals, photography,
+      children’s stories, and videos from my YouTube channel.
+    </p>
 
-  <p class="closing-lines">
-    May you be in the moment — in the <em>Now</em> — dancing to the rhythm of life’s heartbeat.<br>
-    May you hear the voice of Almighty God in the wind as it whispers through the leaves and lands in your soul.
-  </p>
+    <p>
+      The dynamic creativity of the human mind offers us all marvellous,
+      soul-enriching experiences.
+    </p>
+
+    <p class="closing-lines">
+      May you be in the moment — in the <em>Now</em> — dancing to the rhythm of life’s heartbeat.<br>
+      May you hear the voice of Almighty God in the wind as it whispers through the leaves and lands in your soul.
+    </p>
+  </div>
+
   <div class="container">
-
     <section>
       <h2>My Creative World</h2>
       <div class="grid">
+
         <div class="card">
           <img src="images/childrens-stories.jpg" alt="Children's stories">
           <h3>Children’s Stories</h3>
           <p>Gentle stories for little hearts, created with warmth, imagination, and wonder.</p>
         </div>
 
-         <div class="card">
+        <div class="card">
           <img src="images/mandela-effect.jpg" alt="Mandela Effect composition">
-         <h3>Mandela Effect Writing</h3>
-        <p>A thoughtful composition exploring memory, mystery, and the fascination of the Mandela Effect.</p>
-        <p><a href="mandela.html">Open this work →</a></p>
+          <h3>Mandela Effect Writing</h3>
+          <p>A thoughtful composition exploring memory, mystery, and the fascination of the Mandela Effect.</p>
+          <p><a href="mandela.html">Open this work →</a></p>
         </div>
 
         <div class="card">
@@ -211,29 +229,30 @@ From a composition on the Mandela Effect and my father’s autobiography, throug
         </div>
 
         <div class="card">
-  <img src="images/photography.jpg" alt="Photography">
-  <h3>Photography</h3>
-  <p>A thoughtful collection of images captured by Oma Robbie.</p>
-  <p><a href="photography.html">View gallery →</a></p>
-</div>
+          <img src="images/photography.jpg" alt="Photography">
+          <h3>Photography</h3>
+          <p>A thoughtful collection of images captured by Oma Robbie.</p>
+          <p><a href="photography.html">View gallery →</a></p>
+        </div>
+
       </div>
     </section>
 
     <section class="about">
       <h2>About Robin K</h2>
       <p>
-        Through Oma Robbie Stories, I share stories, poetry, art, and creative works that are close to my heart. This space brings together my writing, children’s storytelling, family history, and visual art in one gentle home.
+        Through Oma Robbie Stories, I share stories, poetry, art, and creative works that are close to my heart.
+        This space brings together my writing, children’s storytelling, family history, and visual art in one gentle home.
       </p>
     </section>
-
   </div>
 
   <footer class="footer">
     <p>© Oma Robbie Stories</p>
     <p>
       Watch on YouTube:
-  <a href=https://youtube.com/OmaRobbieStorytime</a>
-</p>
+      <a href="https://youtube.com/@OmaRobbieStorytime">Oma Robbie Storytime</a>
+    </p>
   </footer>
 
 </body>
