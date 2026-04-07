@@ -106,14 +106,21 @@
 }
 
     .card {
-      background: #ffffff;
-      border: 2px solid #f3e3c8;
-      border-radius: 22px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      text-align: center;
-    }
+  background: #ffffff;
+  border: 2px solid #f3e3c8;
+  border-radius: 22px;
+  padding: 22px 20px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: all 0.25s ease;
+}
 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: #ecd2a4;
+}
+    
     .card img {
       width: 100%;
       height: 180px;
@@ -122,18 +129,29 @@
       background: #f8efe2;
       display: block;
       margin-bottom: 15px;
-    }
+      transition: transform 0.25s ease;
+    }  
 
-    .card h3 {
-      margin-top: 0;
-      color: #7d4f3f;
-      font-size: 1.2rem;
-    }
+  .card:hover img {
+  transform: scale(1.03);
+}
+    
+  .card h3 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: #7d4f3f;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
-    .card p {
-      font-size: 0.98rem;
-      margin-bottom: 0;
-    }
+    .card a {
+  display: inline-block;
+  margin-top: 6px;
+}
+  .card p {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
 
     .about {
       background: #fff7ef;
@@ -219,15 +237,15 @@
 
         <div class="card">
           <img src="images/mandela-effect.jpg" alt="Mandela Effect composition">
-          <h3>Mandela Effect Writing</h3>
-          <p>A thoughtful composition exploring memory, mystery, and the fascination of the Mandela Effect.</p>
+          <h3>Mandela Effect</h3>
+          <p>A reflective composition exploring memory, mystery, and the Mandela Effect.</p>
           <p><a href="mandela.html">Open this work →</a></p>
         </div>
 
         <div class="card">
           <img src="images/youtube-storytime.jpg" alt="YouTube Storytime">
-          <h3>Oma Robbie Storytime</h3>
-          <p>Story videos and creative moments from my YouTube channel, shared in a soft and welcoming style.</p>
+          <h3>Youtube</h3>
+          <p>Oma Robbie Storytime — gentle storytelling and creative videos shared on YouTube.</p>
         </div>
 
         <div class="card">
