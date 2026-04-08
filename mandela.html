@@ -6,15 +6,17 @@
   <style>
 
   body {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    line-height: 1.85;
-    background: #f8f6f1;
-    color: #4f433d;
-    max-width: 760px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.85;
+  background: #f8f6f1;
+  color: #4f433d;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 20px;
+  overflow-wrap: break-word;
+}
+    
  .intro-section {
   text-align: center;
   margin-top: 40px;
@@ -28,6 +30,7 @@
     font-size: 2.6rem;
     margin-bottom: 6px;
     letter-spacing: 0.5px;
+    text-wrap: balance;
   }
 
   .page-subtitle {
@@ -50,6 +53,7 @@
     margin-top: 38px;
     margin-bottom: 14px;
     letter-spacing: 0.3px;
+    text-wrap: balance;
   }
 
   .sub-heading {
@@ -57,6 +61,7 @@
     font-size: 1.15rem;
     margin-top: 30px;
     margin-bottom: 10px;
+    text-wrap: balance;
   }
 
   .text-section {
@@ -83,21 +88,25 @@
   font-size: 0.95rem;
 }
 
-  .quote {
-    font-style: italic;
-    text-align: center;
-    margin: 24px auto 10px auto;
-    max-width: 600px;
-    line-height: 1.8;
-  }
+.quote {
+  font-style: italic;
+  text-align: center;
+  margin: 24px auto 10px auto;
+  max-width: 620px;
+  line-height: 1.8;
+  padding: 0 10px;
 
-  .author {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.author {
   text-align: right;
   max-width: 600px;
   margin: 4px auto 20px auto;
   font-size: 14px;
   color: #6f6258;
-  font-style: italic;
+  font-style: normal; /* ← change this */
 }
 
   .quote-reference {
@@ -512,11 +521,11 @@ And perhaps, still unfolding.
   </div>
 
 <!-- SOCIAL CONTAGION OF MEMORY -->
-    
-     <div class="text-section">
-<h2 id="social-contagion" class="section-heading">Social Contagion of Memory</h2>
 
-  <p class="author">
+<div class="text-section">
+  <h2 id="social-contagion" class="section-heading">Social Contagion of Memory</h2>
+
+  <p class="source-note">
     Adapted from research by H. L. Roediger III, M. L. Meade, and E. T. Bergman<br>
     <em>Social Contagion of Memory</em>, <em>Psychonomic Bulletin &amp; Review</em>, 2001
   </p>
@@ -554,19 +563,16 @@ And perhaps, still unfolding.
     Not an anomaly, but a quiet feature of the human mind.
   </p>
 
-          <p class="back-link">
+  <p class="quote">
+    “Anti-social behaviour is a trait of intelligence in a world full of conformists... The gift of mental power comes from the Divine... if we concentrate our minds on that truth, we become in tune with this great power.”
+  </p>
+
+  <p class="quote-author">Nikola Tesla</p>
+</div>
+
+<p class="back-link">
   <a href="#top">↑ Back to Top</a>
 </p>
-
-</div>
-
-  <p class="quote">
-  “Anti-social behaviour is a trait of intelligence in a world full of conformists... The gift of mental power comes from the Divine... if we concentrate our minds on that truth, we become in tune with this great power.” 
-</p>
-
-<p class="author">Nikola Tesla</p>
- 
-</div>
 
 <!-- WHAT IS THE MANDELA EFFECT -->
   
@@ -596,12 +602,6 @@ And perhaps, still unfolding.
     This perspective frames the shifts not as glitches or failed experiments, but as an invitation to remember our true nature as spiritual, quantum beings rather than merely physical “sons of man”.
   </p>
 
-     <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
-
-</div>
-
 <!-- FRANCIS THOMPSON -->
   
   <p class="quote">
@@ -619,6 +619,10 @@ And perhaps, still unfolding.
   
 </div>
 
+         <p class="back-link">
+  <a href="#top">↑ Back to Top</a>
+</p>
+
 <!-- MANDELA EFFECT EXAMPLES -->
   
 <div class="text-section">
@@ -629,13 +633,13 @@ And perhaps, still unfolding.
   </p>
 
   <p>
-    For me personally, the most convincing evidence came from changes I observed in my own decades-old King James Version Bible.
+    For me personally, some convincing evidence came from changes I observed in my own decades-old King James Version Bible.
   </p>
 
   <h3 class="sub-heading">Art &amp; Iconic Images</h3>
   <ul>
-    <li>The Thinker statue</li>
-    <li>Mona Lisa (many recall a different expression or gaze)</li>
+    <li>The Thinker statue (fist on forehead vs open hand under or near chin)</li>
+    <li>Mona Lisa (many recall a different expression, gaze and she was an unknown person)</li>
     <li>The Creation of Adam (fingertips touching vs. almost touching)</li>
     <li>Vitruvian Man by Leonardo da Vinci — I own a sculpture I dusted for years. It now appears noticeably different, with both feet pointing left instead of the sacred geometry I remembered.</li>
   </ul>
@@ -644,20 +648,20 @@ And perhaps, still unfolding.
   <ul>
     <li>Apollo 13: “Houston, we have a problem” → Now “Uh, Houston, we’ve had a problem.”</li>
     <li>The Matrix: Many recall Morpheus telling Neo, “What if I told you everything you thought you knew was a lie?” — This line does not exist in the movie.</li>
-    <li>Moonraker: Jaws falling in love with Dolly because she has braces.</li>
+    <li>Moonraker: Jaws falling in love with Dolly because she has braces, → Now she has perfect teeth.</li>
     <li>Forrest Gump: “Life is like a box of chocolates…” → Now “Life was like a box of chocolates…”</li>
   </ul>
 
   <p>
-    (I own an original Bubba Gump Shrimp Co. bag with the older version printed on it.)
+    (I own a original Bubba Gump Shrimp Co. bag with the older version printed on it.)
   </p>
 
   <h3 class="sub-heading">Childhood &amp; Pop Culture</h3>
   <ul>
     <li>Snow White: “Mirror, mirror on the wall…” → Now “Magic mirror on the wall…”</li>
     <li>Star Wars: Darth Vader saying “Luke, I am your father” → Now “No, I am your father.”</li>
-    <li>KitKat: Many remember it spelled “Kit-Kat” with a hyphen.</li>
-    <li>Pokémon: Many insist it was spelled “Pokeman”.</li>
+    <li>“Kit-Kat” spelt with a hyphen → Now its one word.</li>
+    <li> “Pokeman” → Now Pokémon.</li>
   </ul>
 
      <p class="back-link">
