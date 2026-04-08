@@ -5,187 +5,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oma Robbie Stories</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      background: #fffaf4;
-      color: #5a4a42;
-      line-height: 1.7;
-    }
-
-    .notice-box {
-  text-align: center;
-  background: #f5efe6;
-  padding: 12px 16px;
-  margin: 20px auto;
-  max-width: 500px;
-  border: 1px solid #ead8b8;
-  border-radius: 8px;
-  color: #7a6a5f;  /* slightly darker */
-  font-style: italic;
-}
-
-    .hero {
-      background: linear-gradient(to bottom, #fdeccf, #fdf6ea);
-      text-align: center;
-      padding: 70px 20px 50px;
-      border-bottom: 4px solid #f2d8a7;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #8a5a44;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 12px;
-      color: #7a6a5f;
-    }
-
-    .intro-section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 20px;
-      text-align: center;
-    }
-
-    .intro-subtitle {
-      font-size: 1.2rem;
-      color: #8a5a44;
-      margin-bottom: 20px;
-    }
-
-    .intro-greeting {
-      margin-top: 0;
-    }
-
-    .closing-lines {
-      margin-top: 24px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px 20px 60px;
-    }
-
-    h2 {
-      text-align: center;
-      color: #8a5a44;
-      margin-bottom: 24px;
-      font-size: 2rem;
-    }
-
-   .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 50px;
-}
-
-    @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+<style>
+  body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fffaf4;
+    color: #5a4a42;
+    line-height: 1.7;
   }
-}
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .notice-box {
+    text-align: center;
+    background: #f5efe6;
+    padding: 12px 16px;
+    margin: 20px auto;
+    max-width: 500px;
+    border: 1px solid #ead8b8;
+    border-radius: 8px;
+    color: #7a6a5f;
+    font-style: italic;
+  }
+
+  .hero {
+    background: linear-gradient(to bottom, #fdeccf, #fdf6ea);
+    text-align: center;
+    padding: 70px 20px 50px;
+    border-bottom: 4px solid #f2d8a7;
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    margin: 0;
+    font-size: 3rem;
+    color: #8a5a44;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    color: #7a6a5f;
   }
 
-    .card {
-  background: #ffffff;
-  border: 2px solid #f3e3c8;
-  border-radius: 22px;
-  padding: 22px 20px 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: all 0.25s ease;
-}
+  .intro-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  border-color: #ecd2a4;
-}
-    
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 16px;
-      background: #f8efe2;
-      display: block;
-      margin-bottom: 15px;
-      transition: transform 0.25s ease;
-    }  
+  .intro-subtitle {
+    font-size: 1.2rem;
+    color: #8a5a44;
+    margin-bottom: 20px;
+  }
+
+  .intro-greeting {
+    margin-top: 0;
+  }
+
+  .closing-lines {
+    margin-top: 24px;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #8a5a44;
+    margin-bottom: 24px;
+    font-size: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 2px solid #f3e3c8;
+    border-radius: 22px;
+    padding: 22px 20px 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-color: #ecd2a4;
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+    background: #f8efe2;
+    display: block;
+    margin-bottom: 15px;
+    transition: transform 0.25s ease;
+  }
 
   .card:hover img {
-  transform: scale(1.03);
-}
-    
- .card h3 {
-  margin-top: 4px;
-  margin-bottom: 6px;
-  color: #7d4f3f;
-  font-size: 1.2rem;
-  text-align: center;
-}
+    transform: scale(1.03);
+  }
 
-    .card a {
-  display: inline-block;
-  margin-top: 6px;
-}
+  .card h3 {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    color: #7d4f3f;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .card a {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
   .card p {
-  margin-top: 0;
-  margin-bottom: 6px;
-}
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
 
-    .about {
-      background: #fff7ef;
-      border: 2px solid #f2dfbf;
-      border-radius: 24px;
-      padding: 28px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  .about {
+    background: #fff7ef;
+    border: 2px solid #f2dfbf;
+    border-radius: 24px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    color: #8a7a70;
+    font-size: 0.95rem;
+  }
+
+  a {
+    color: #9a5f4d;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
     }
 
-    .footer {
-      text-align: center;
-      padding: 30px 20px 50px;
-      color: #8a7a70;
-      font-size: 0.95rem;
+    .hero h1 {
+      font-size: 2.2rem;
     }
 
-    a {
-      color: #9a5f4d;
-      text-decoration: none;
+    .hero p {
+      font-size: 1rem;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
+  }
+</style>
   
   </style>
 </head>
