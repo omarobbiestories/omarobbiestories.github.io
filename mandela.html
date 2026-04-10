@@ -3,9 +3,11 @@
 <head>
   <title>Mandela Effect | Oma Robbie Stories</title>
   
-  <style>
+<style>
 
-  body {
+/* BASE ELEMENTS */
+
+body {
   font-family: Georgia, serif;
   font-size: 18px;
   line-height: 1.85;
@@ -16,32 +18,115 @@
   padding: 0 20px;
   overflow-wrap: break-word;
 }
-    
- .intro-section {
+
+em {
+  color: #7a6a5f;
+  font-style: italic;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-bottom: 22px;
+  padding-left: 24px;
+}
+
+
+/* LINKS */
+
+a {
+  color: #9a5f4d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: #7a6a5f;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* LAYOUT SECTIONS */
+
+.back-link {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.center-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.intro-section {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 50px;
   color: #8a7a70;
 }
-    
-  .page-title {
-    text-align: center;
-    color: #7c4f3d;
-    font-size: 2.6rem;
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-    text-wrap: balance;
-  }
 
-.page-subtitle {
-  color: #6f6258;
-  text-align: center;
-  margin-top: -8px;
-  margin-bottom: 8px;
-  font-size: 1.05rem;
+.intro-section p {
+  max-width: 640px;
+  margin: 10px auto;
+  line-height: 1.8;
 }
 
-      .page-author {
+.nav-link {
+  display: block;
+  margin-bottom: 25px;
+  color: #7a6a5f;
+  font-size: 0.95rem;
+}
+
+.text-section {
+  margin-top: 42px;
+  margin-bottom: 52px;
+}
+
+.text-section p {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+
+/* HEADINGS AND TEXT */
+
+.bible-reference {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #7a6a5f;
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #7a6a5f;
+  margin-top: -18px;
+  margin-bottom: 10px;
+}
+
+.intro-subtitle {
+  font-size: 1rem;
+  color: #8a7a70;
+  margin-bottom: 25px;
+}
+
+.page-author {
   text-align: center;
   color: #6f6258;
   font-size: 0.95rem;
@@ -51,10 +136,49 @@
   letter-spacing: 0.2px;
 }
 
-    .intro-subtitle {
+.page-subtitle {
+  color: #6f6258;
+  text-align: center;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.page-title {
+  text-align: center;
+  color: #7c4f3d;
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+  text-wrap: balance;
+}
+
+.part-heading {
+  text-align: center;
+  color: #6f6258;
   font-size: 1rem;
-  color: #8a7a70;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+  letter-spacing: 0.4px;
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  margin: 24px auto 10px auto;
+  max-width: 620px;
+  line-height: 1.8;
+  padding: 0 10px;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.quote-author {
+  text-align: right;
+  font-size: 14px;
+  color: #6f6258;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-style: normal;
 }
 
 .section-heading {
@@ -69,37 +193,7 @@
   margin-right: auto;
 }
 
-  .sub-heading {
-    color: #7c4f3d;
-    font-size: 1.15rem;
-    margin-top: 30px;
-    margin-bottom: 12px;
-    max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-    text-wrap: balance;
-  }
-
-  .text-section {
-  margin-top: 42px;
-  margin-bottom: 52px;
-}
-
-.text-section p {
-  max-width: 660px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 18px;
-  text-align: justify;
-}
-
-    .intro-section p {
-  max-width: 640px;
-  margin: 10px auto;
-  line-height: 1.8;
-  }   
-
-    .source-note {
+.source-note {
   color: #6f6258;
   text-align: center;
   margin-top: -6px;
@@ -107,44 +201,41 @@
   font-size: 0.95rem;
 }
 
-.quote {
-  font-style: italic;
-  text-align: center;
-  margin: 24px auto 10px auto;
-  max-width: 620px;
-  line-height: 1.8;
-  padding: 0 10px;
+.sub-heading {
+  color: #7c4f3d;
+  font-size: 1.15rem;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
   text-wrap: balance;
-  overflow-wrap: break-word;
 }
- 
- .quote-author {
-  text-align: right;
-  font-size: 14px;
-  color: #6f6258;
-  margin-top: 6px;
-  margin-bottom: 20px;
-  font-style: normal;
-}
-    
-.bible-reference {
-  text-align: right;
-  font-size: 0.9rem;
-  color: #7a6a5f;
-  margin-top: 6px;
+
+
+/* LISTS */
+
+.mandela-list {
+  padding-left: 18px;
+  margin-top: 10px;
   margin-bottom: 24px;
 }
-    
 
-    em {
-  color: #7a6a5f;
-  font-style: italic;
+.mandela-list li {
+  margin-bottom: 12px;
+  padding-bottom: 6px;
 }
 
- .center-image {
-  text-align: center;
-  margin-top: 20px;
+.mandela-list li em {
+  color: #7c4f3d;
 }
+
+.mandela-list li strong {
+  color: #5a4a42;
+}
+
+
+/* IMAGES */
 
 .img-crop {
   width: 100%;
@@ -168,74 +259,10 @@
   display: block;
 }
 
-   .image-caption {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #7a6a5f;
-  margin-top: -18px;
-  margin-bottom: 10px;
-}
 
-    .mandela-list {
-  max-width: 660px;
-  margin: 0 auto 25px;
-  padding-left: 20px;
-}
+/* SPECIAL BLOCKS */
 
-.mandela-list li {
-  margin-bottom: 6px;
-  line-height: 1.6;
-}
-    
-  a {
-    color: #9a5f4d;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
- .nav-link {
-  display: block;
-  margin-bottom: 25px;
-  color: #7a6a5f;
-  font-size: 0.95rem;
-}
-
-  ul {
-    margin-bottom: 22px;
-    padding-left: 24px;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-
-  .part-heading {
-    text-align: center;
-    color: #6f6258;
-    font-size: 1rem;
-    margin-bottom: 35px;
-    letter-spacing: 0.4px;
-  }
-
-      .back-link {
-  margin-top: 30px;
-  font-size: 0.95rem;
-  text-align: left;
-}
-
-.back-link a {
-  text-decoration: none;
-  color: #7a6a5f;
-}
-
-.back-link a:hover {
-  text-decoration: underline;
-}
-
-    .notice-box {
+.notice-box {
   text-align: center;
   background: #f5efe6;
   padding: 12px 16px;
@@ -244,11 +271,11 @@
   border: 1px solid #ead8b8;
   border-radius: 8px;
   color: #7a6a5f;
- font-style: italic;
- font-size: 0.95rem;
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
-  </style>
+</style>
   </head>
 <body id="top">
 
@@ -1647,194 +1674,139 @@ And perhaps, still unfolding.
 </div>
 
 <!-- PART III — BIBLICAL MANDELA EFFECT ARCHIVE-->
-  
+
 <div class="text-section">
 
   <h2 id="bible" class="section-heading">Part III — Biblical Mandela Effect Archive</h2>
   <p><em>(Up to March 2019)</em></p>
 
   <p>
-    Many Christians report supernatural changes in their long-owned King James Version (KJV) Bibles — not newly purchased ones. These alterations have caused deep concern and renewed Bible study for thousands.
+    Many Christians report perceived changes in long-owned King James Version (KJV) Bibles — not newly purchased ones. These observations have led to concern, reflection, and renewed study for many.
   </p>
 
   <p>
-    A pastor who studied under Dr Jean Scott for thirty years has expressed grief over some of the changes.
+    One pastor, who studied under Dr Jean Scott for thirty years, has expressed deep unease over some of the wording differences.
   </p>
-   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
+
+  <p class="back-link">
+    <a href="#top">↑ Back to Top</a>
+  </p>
 
 </div>
 
-<!-- MOST COMMONLY REPORTED CHANGES (AFFECTING ALL HISTORICALLY PRINTED BIBLES) -->
-  
+<!-- MOST COMMONLY REPORTED CHANGES -->
+
 <div class="text-section">
 
-  <h3 class="sub-heading">Most Commonly Reported Changes (Affecting All Historically Printed Bibles)</h3>
+  <h3 class="sub-heading">Most Commonly Reported Changes</h3>
 
-  <ul>
-    <li>
-      <strong>Isaiah 11:6</strong><br>
-      Remembered: “The lion shall dwell with the lamb…”<br>
-      Now: “The wolf also shall dwell with the lamb…”
-    </li>
+  <ul class="mandela-list">
 
-    <li>
-      <strong>Matthew 6:9–13 (The Lord’s Prayer)</strong><br>
-      Remembered: “Forgive us our trespasses…”<br>
-      Now: “Forgive us our debts…” or “sins” in some versions
-    </li>
+    <li><strong>Isaiah 11:6:</strong> Remembered as “The lion shall dwell with the lamb…” <em>Now “The wolf also shall dwell with the lamb…”</em></li>
+
+    <li><strong>Matthew 6:9–13 (The Lord’s Prayer):</strong> Remembered as “Forgive us our trespasses…” <em>Now often rendered as “Forgive us our debts” or “sins”, depending on the version.</em></li>
+
   </ul>
-   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
+
+  <p class="back-link">
+    <a href="#top">↑ Back to Top</a>
+  </p>
 
 </div>
 
 <!-- OTHER NOTABLE CHANGES -->
+
 <div class="text-section">
 
   <h3 class="sub-heading">Other Notable Changes in the KJV</h3>
 
-  <ul>
-    <li><strong>Genesis 1:1:</strong> “Heavens” → “Heaven”</li>
-    <li><strong>Genesis 31:34:</strong> “Camel’s saddle” → “Camel’s furniture”</li>
-    <li><strong>Genesis 40:1:</strong> “Cupbearer” → “Butler”</li>
-    <li><strong>Exodus 7:10–12:</strong> Moses’ staff → Aaron’s rod turned into a serpent</li>
-    <li><strong>Exodus 13:12:</strong> “Womb” → “Matrix” (and 24 other verses)</li>
-    <li><strong>Exodus 24:12:</strong> “Tablets of stone” → “Tables of stone”</li>
-    <li><strong>Numbers 24:14 / Ruth 4:4:</strong> “Advise” → “Advertise”</li>
-    <li><strong>Deuteronomy 17:1:</strong> “Defect / blemish” → “Evilfavouredness”</li>
-    <li><strong>Deuteronomy 33:17 / Psalm 22:21 / Isaiah 34:7:</strong> “Wild ox” → “Unicorns”</li>
-    <li><strong>Job 19:23:</strong> “Scroll” → “Book”</li>
-    <li><strong>Psalm 46:10:</strong> “On the earth” → “In the earth”</li>
-    <li><strong>Psalm 119:2:</strong> “Commandments” → “Testimonies”</li>
-    <li><strong>Proverbs 11:30:</strong> Structural and wording changes</li>
-    <li><strong>Matthew 2:11:</strong> “Manger” → “House”</li>
-    <li><strong>Luke 12:24:</strong> “Sparrow” → “Ravens”</li>
-    <li><strong>Luke 17:34:</strong> Two men in one bed (newly noticed by many)</li>
-    <li><strong>Luke 19:23:</strong> Mention of a “bank”</li>
-    <li><strong>John 3:16:</strong> “Shall not perish” → “Should not perish”</li>
-    <li><strong>John 6:51:</strong> “Sins of the world” → “Life of the world”</li>
-    <li><strong>John 8:32:</strong> “Set you free” → “Make you free”</li>
-    <li><strong>John 14:6:</strong> “The light” → “The life”</li>
+  <ul class="mandela-list">
+
+    <li><strong>Genesis 1:1:</strong> Remembered “Heavens” <em>Now “Heaven”</em></li>
+
+    <li><strong>Genesis 31:34:</strong> Remembered “Camel’s saddle” <em>Now “Camel’s furniture”</em></li>
+
+    <li><strong>Genesis 40:1:</strong> Remembered “Cupbearer” <em>Now “Butler”</em></li>
+
+    <li><strong>Exodus 7:10–12:</strong> Remembered Moses’ staff turning into a serpent <em>Now Aaron’s rod is described as transforming</em></li>
+
+    <li><strong>Exodus 13:12:</strong> Remembered “Womb” <em>Now “Matrix”</em></li>
+
+    <li><strong>Exodus 24:12:</strong> Remembered “Tablets of stone” <em>Now “Tables of stone”</em></li>
+
+    <li><strong>Numbers 24:14 / Ruth 4:4:</strong> Remembered “Advise” <em>Now “Advertise”</em></li>
+
+    <li><strong>Deuteronomy 17:1:</strong> Remembered “Defect” or “blemish” <em>Now “evilfavouredness”</em></li>
+
+    <li><strong>Deuteronomy 33:17 / Psalm 22:21 / Isaiah 34:7:</strong> Remembered “Wild ox” <em>Now “Unicorns”</em></li>
+
+    <li><strong>Job 19:23:</strong> Remembered “Scroll” <em>Now “Book”</em></li>
+
+    <li><strong>Psalm 46:10:</strong> Remembered “On the earth” <em>Now “In the earth”</em></li>
+
+    <li><strong>Psalm 119:2:</strong> Remembered “Commandments” <em>Now “Testimonies”</em></li>
+
+    <li><strong>Matthew 2:11:</strong> Remembered “Manger” <em>Now “House”</em></li>
+
+    <li><strong>Luke 12:24:</strong> Remembered “Sparrow” <em>Now “Ravens”</em></li>
+
+    <li><strong>Luke 17:34:</strong> Remembered differently <em>Now includes “two men in one bed”, newly noted by many</em></li>
+
+    <li><strong>Luke 19:23:</strong> Remembered without reference to finance <em>Now includes mention of a “bank”</em></li>
+
+    <li><strong>John 3:16:</strong> Remembered “shall not perish” <em>Now “should not perish”</em></li>
+
+    <li><strong>John 6:51:</strong> Remembered “sins of the world” <em>Now “life of the world”</em></li>
+
+    <li><strong>John 8:32:</strong> Remembered “set you free” <em>Now “make you free”</em></li>
+
+    <li><strong>John 14:6:</strong> Remembered “the light” <em>Now “the life”</em></li>
+
   </ul>
-   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
+
+  <p class="back-link">
+    <a href="#top">↑ Back to Top</a>
+  </p>
 
 </div>
 
-<!-- DISTURBING OR UNUSUAL WORDING CHANGES-->
+<!-- DISTURBING OR UNUSUAL WORDING -->
+
 <div class="text-section">
 
   <h3 class="sub-heading">Disturbing or Unusual Wording Changes</h3>
 
-  <ul>
-    <li><strong>1 Samuel 25:22 / 1 Kings 14:10 / 1 Kings 16:11 / 1 Kings 21:21 / 2 Kings 9:8:</strong> “Every male” → “Pisseth against the wall”</li>
+  <ul class="mandela-list">
 
-    <li><strong>Isaiah 49:23:</strong> “Foster fathers” → “Nursing fathers” and “nursing mothers”</li>
+    <li><strong>1 Samuel 25:22 / 1 Kings 14:10 (and others):</strong> Remembered “Every male” <em>Now “Pisseth against the wall”</em></li>
 
-    <li><strong>Isaiah 60:2:</strong> “Deep darkness” → “Gross darkness”</li>
+    <li><strong>Isaiah 49:23:</strong> Remembered “Foster fathers” <em>Now “Nursing fathers” and “nursing mothers”</em></li>
 
-    <li><strong>Jeremiah 24:2 / Proverbs 17:4:</strong> “Bad / worthless” → “Naughty”</li>
+    <li><strong>Isaiah 60:2:</strong> Remembered “Deep darkness” <em>Now “Gross darkness”</em></li>
 
-    <li><strong>Ezekiel 24:23:</strong> “Turbans” → “Tires”; “sandals” → “Shoes”</li>
+    <li><strong>Jeremiah 24:2 / Proverbs 17:4:</strong> Remembered “Bad” or “worthless” <em>Now “Naughty”</em></li>
 
-    <li><strong>Zechariah 9:9 / Matthew 21:5:</strong> “Donkey” → “Ass”</li>
+    <li><strong>Ezekiel 24:23:</strong> Remembered “Turbans” and “sandals” <em>Now “Tires” and “shoes”</em></li>
 
-    <li><strong>Matthew 9:17 / Mark 2:22 / Luke 5:37:</strong> “Wine skins” → “Bottles”</li>
+    <li><strong>Zechariah 9:9 / Matthew 21:5:</strong> Remembered “Donkey” <em>Now “Ass”</em></li>
 
-    <li><strong>Mark 13:10 / Luke 8:39:</strong> “Preached” → “Published”</li>
+    <li><strong>Matthew 9:17 / Mark 2:22 / Luke 5:37:</strong> Remembered “Wineskins” <em>Now “Bottles”</em></li>
 
-    <li><strong>Luke 1:35:</strong> “Holy One” → “Holy thing”</li>
+    <li><strong>Mark 13:10 / Luke 8:39:</strong> Remembered “Preached” <em>Now “Published”</em></li>
 
-    <li><strong>Luke 5:19 / 5:24:</strong> “Bed / mat” → “Couch”</li>
+    <li><strong>Luke 1:35:</strong> Remembered “Holy One” <em>Now “Holy thing”</em></li>
 
-    <li><strong>Luke 3:36:</strong> “Noah” → “Noe”</li>
+    <li><strong>Luke 5:19 / 5:24:</strong> Remembered “Bed” or “mat” <em>Now “Couch”</em></li>
 
-    <li><strong>Matthew 27:9:</strong> “Jeremiah” → “Jeremy”</li>
+    <li><strong>Acts 12:4:</strong> Remembered “Passover” <em>Now “Easter”</em></li>
 
-    <li><strong>Acts 12:4:</strong> “Passover” → “Easter”</li>
+    <li><strong>1 Corinthians 13:13:</strong> Remembered “Love” <em>Now “Charity”</em></li>
 
-    <li><strong>1 Corinthians 13:13:</strong> “Love” → “Charity”</li>
+    <li><strong>Hebrews 11:34:</strong> Remembered “Foreign armies” <em>Now “Aliens”</em></li>
 
-    <li><strong>Hebrews 11:34:</strong> “Foreign armies” → “Aliens”</li>
+    <li><strong>Acts 5:30:</strong> Remembered “Cross” <em>Now “Tree”</em></li>
 
-    <li><strong>Acts 5:30:</strong> “Cross” → “Tree”</li>
-
-    <li><strong>Romans 15:8 / Colossians 4:11:</strong> “Servant of the Jews” → “Minister of the circumcision”</li>
   </ul>
-   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
-
-</div>
-
-  <!-- PERSONAL OBSERVATIONS FROM MY OWN KJV BIBLE -->
-  
-<div class="text-section">
-
-  <h3 class="sub-heading">Personal Observations from My Own KJV Bible</h3>
-
-  <ul>
-    <li><strong>Job 19:23:</strong> “Scroll” → “Book”</li>
-    <li><strong>Psalm 46:10:</strong> “On the earth” → “In the earth”</li>
-    <li><strong>Psalm 119:2:</strong> “Commandments” → “Testimonies”</li>
-    <li><strong>Matthew 2:11:</strong> “Manger” → “House”</li>
-    <li><strong>Luke 12:24:</strong> “Sparrow” → “Ravens”</li>
-    <li><strong>John 8:32:</strong> “Set you free” → “Make you free”</li>
-    <li><strong>John 14:6:</strong> “Light” → “Life”</li>
-  </ul>
-   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
-
-</div>
-
-<!-- PSALM 40 -->
-<div class="text-section">
-
-  <h3 class="sub-heading">Psalm 40</h3>
-
-  <p>
-    I wrote a song in 1992 using direct quotes from Psalm 40 in my King James Version Bible. Several lines have since changed:
-  </p>
-
-  <ul>
-    <li><strong>Psalm 40:1–2:</strong> “Dangerous pit… deadly quicksand” → “Horrible pit… miry clay”</li>
-    <li><strong>Psalm 40:3–5:</strong> Subtle wording shifts in the “new song” and “wonderful plans”</li>
-    <li><strong>Psalm 40:6–7:</strong> “Ears to hear You” → “My ears You have opened”</li>
-    <li><strong>Haggai 2:8:</strong> “All the silver and gold says the Lord is mine” → “The silver is Mine, and the gold is Mine, says the Lord of hosts”</li>
-  </ul>
-   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
-
-  <p>
-    These changes have prompted many believers to return to regular Bible reading. While some dismiss them as poor memory, others see them as part of a larger spiritual phenomenon — a reminder that the true Word of God is written in our hearts rather than relying solely on the printed page.
-  </p>
-
-  <p>
-    We must stay strong in faith, trusting that we are under Almighty God’s protection.
-  </p>
-
-  <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
-
-</div>
-
-<!-- RECOMMENDED VIDEO -->
-<div class="text-section">
-
-  <h3 class="sub-heading">Recommended Video</h3>
-
-  <p><strong>Pastor’s testimony on KJV changes</strong></p>
-
-  <a href="https://www.youtube.com/watch?v=FgFu9w_iV_I&t=3783s" target="_blank">
-    Jesus of Nazareth (Part Two) — timestamp approx. 3:39:54
-  </a>
 
 </div>
 
@@ -1851,63 +1823,62 @@ And perhaps, still unfolding.
     “The lion shall lie down with the lamb.”
   </p>
 
-  <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
-
 </div>
 
-<!-- PART IV RELATED MEDIA AND FURTHER READING-->
+<!-- PART IV — RELATED MEDIA AND FURTHER READING-->
   
 <div class="text-section">
 
   <h2 id="media" class="section-heading">Part IV — Media and Further Reading</h2>
   
   <p>
-    This list includes films and books that explore themes of alternate realities, parallel universes, dream states, consciousness shifts, and simulation theory. They can be fun, thought-provoking entertainment related to the Mandela Effect and multiverse ideas.
+    This section brings together films, books, and resources that explore themes of alternate realities, parallel universes, dream states, shifts in consciousness, and simulation theory. They offer thought-provoking and often entertaining perspectives related to the Mandela Effect and multiverse ideas.
   </p>
-  
-   <a href="https://www.biblica.com/articles/7-well-known-bible-story-pictures-that-arent-actually-in-the-bible/" target="_blank">
-    7 Well-Known Bible Story Pictures That Aren’t Actually in the Bible
-  </a>
 
-  <ul>
-    <li>This is Andromeda (Sci-Fi short film, 22:31 mins)</li>
-    <li>Back to the Future (1985)</li>
-    <li>Her (2013) — Falling in love with an AI operating system</li>
-    <li>Jupiter Ascending (2015)</li>
-    <li>The X-Files — Season 11, Episode 4 (Mandela Effect and parallel universes)</li>
-    <li>Spider-Man: Into the Spider-Verse (2018)</li>
-    <li>Stranger Things</li>
-    <li>They Live (1988) — Hidden messages and control of perception</li>
-    <li>The Butterfly Effect (2004)</li>
-    <li>The Matrix (1999)</li>
-    <li>The Thirteenth Floor (1999)</li>
-    <li>The Secret (2006)</li>
-    <li>Three Magic Words (2010)</li>
-    <li>Vanilla Sky (2001)</li>
-    <li>What the Bleep Do We Know!? (2004)</li>
+  <p>
+    <a href="https://www.biblica.com/articles/7-well-known-bible-story-pictures-that-arent-actually-in-the-bible/" target="_blank">
+      7 Well-Known Bible Story Pictures That Aren’t Actually in the Bible
+    </a>
+  </p>
+
+  <ul class="mandela-list">
+    <li><strong>Back to the Future</strong> (1985)</li>
+    <li><strong>Her</strong> (2013): A story exploring human connection with artificial intelligence</li>
+    <li><strong>Jupiter Ascending</strong> (2015)</li>
+    <li><strong>Spider-Man: Into the Spider-Verse</strong> (2018)</li>
+    <li><strong>Stranger Things</strong></li>
+    <li><strong>The Butterfly Effect</strong> (2004)</li>
+    <li><strong>The Matrix</strong> (1999)</li>
+    <li><strong>The Secret</strong> (2006)</li>
+    <li><strong>The Thirteenth Floor</strong> (1999)</li>
+    <li><strong>They Live</strong> (1988): Hidden messages and the manipulation of perception</li>
+    <li><strong>This Is Andromeda:</strong> Sci-fi short film (22 mins)</li>
+    <li><strong>The X-Files:</strong> Season 11, Episode 4 — themes of the Mandela Effect and parallel universes</li>
+    <li><strong>Three Magic Words</strong> (2010)</li>
+    <li><strong>Vanilla Sky</strong> (2001)</li>
+    <li><strong>What the Bleep Do We Know!?</strong> (2004)</li>
   </ul>
 
   <p class="back-link">
-  <a href="#top">↑ Back to Top</a>
-</p>
+    <a href="#top">↑ Back to Top</a>
+  </p>
 
 </div>
 
 <!-- BOOKS OF INTEREST-->
+
 <div class="text-section">
 
   <h3 class="sub-heading">Books of Interest</h3>
 
-  <ul>
-    <li>Cynthia Sue Larson — <em>Reality Shifts: When Consciousness Changes the Physical World</em></li>
-    <li>Dolores Cannon — <em>The Convoluted Universe</em> series (Books 1–4) and <em>The Three Waves of Volunteers and the New Earth</em></li>
-    <li>Jacob Israel (2008) — <em>The Calling</em></li>
-    <li>Wes Penre — <em>Synthetic Intelligence and the Transmutation of Humankind</em></li>
-    <li>Salantra (2008) — <em>Experience Heaven on Earth: The New Matrix of Life</em></li>
-    <li>Uell Stanley Anderson (1954) — <em>Three Magic Words</em></li>
-    <li>T.J. Allen — <em>Strong Delusion</em></li>
+  <ul class="mandela-list">
+    <li><strong>Cynthia Sue Larson:</strong> <em>Reality Shifts — When Consciousness Changes the Physical World</em></li>
+    <li><strong>Dolores Cannon:</strong> <em>The Convoluted Universe</em> series (Books 1–4), and <em>The Three Waves of Volunteers and the New Earth</em></li>
+    <li><strong>Jacob Israel (2008):</strong> <em>The Calling</em></li>
+    <li><strong>Wes Penre:</strong> <em>Synthetic Intelligence and the Transmutation of Humankind</em></li>
+    <li><strong>Salantra (2008):</strong> <em>Experience Heaven on Earth — The New Matrix of Life</em></li>
+    <li><strong>Uell Stanley Anderson (1954):</strong> <em>Three Magic Words</em></li>
+    <li><strong>T.J. Allen:</strong> <em>Strong Delusion</em></li>
   </ul>
 
 </div>
