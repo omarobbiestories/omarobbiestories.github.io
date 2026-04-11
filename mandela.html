@@ -251,26 +251,76 @@ a:hover {
 
 .img-crop {
   width: 100%;
-  max-width: 760px;
-  height: 380px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 16px;
-  margin: 34px auto;
+  max-width: 520px;
+  height: auto;       
   display: block;
+  margin: 28px auto;
+  border-radius: 12px;
 }
 
+  
 .img-full {
   width: 100%;
-  max-width: 760px;
+  max-width: 480px;
   height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  border-radius: 16px;
-  margin: 34px auto;
   display: block;
+  margin: 30px auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+  /* ARCHIVE IMAGE LAYOUTS */
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 18px;
+  max-width: 680px;
+  margin: 30px auto;
+  align-items: start;
+}
+
+.archive-item {
+  text-align: center;
+}
+
+.archive-item img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.archive-caption {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #7a6a5f;
+  margin: 0 auto;
+  max-width: 220px;
+  text-align: center;
+}
+
+/* SMALLER INLINE IMAGE STYLE */
+
+.img-inline {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 22px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+/* OPTIONAL: tighter archive spacing inside long sections */
+
+.text-section .archive-grid {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 
 /* SPECIAL BLOCKS */
 
@@ -1238,22 +1288,29 @@ And perhaps, still unfolding.
   <ul class="mandela-list">
 
     <li>
-      <strong>American Gothic:</strong> American Gothic is a 1930 oil painting by Grant Wood. 
-      Remembered with the woman looking straight ahead and appearing older. 
-      <em>Now her gaze is to the side and she looks younger according to some memories.</em>
+  <strong>American Gothic:</strong> American Gothic is a 1930 oil painting by Grant Wood. 
+  Remembered with the woman looking straight ahead and appearing older. 
+  <em>Now her gaze is to the side and she looks younger.</em>
+</li>
 
-      <div class="center-image">
-        <img src="images/art-american-gothic-a.jpg" class="img-full" alt="American Gothic variation A">
-      </div>
+<div class="archive-grid">
 
-      <div class="center-image">
-        <img src="images/art-american-gothic-b.jpg" class="img-full" alt="American Gothic variation B">
-      </div>
+  <div class="archive-item">
+    <img src="images/art-american-gothic-a.jpg" alt="American Gothic variation A">
+    <p class="archive-caption">Current version</p>
+  </div>
 
-      <div class="center-image">
-        <img src="images/art-american-gothic-c.jpg" class="img-full" alt="American Gothic variation C">
-      </div>
-    </li>
+  <div class="archive-item">
+    <img src="images/art-american-gothic-b.jpg" alt="American Gothic variation B">
+    <p class="archive-caption">Common memory</p>
+  </div>
+
+  <div class="archive-item">
+    <img src="images/art-american-gothic-c.jpg" alt="American Gothic variation C">
+    <p class="archive-caption">Common memory</p>
+  </div>
+
+</div>
 
     <li><strong>The Creation of Adam:</strong> Hand positions remembered differently. <em>Now differ from what many recall.</em></li>
 
