@@ -6,186 +6,208 @@
   <title>Children’s Stories | Oma Robbie Stories</title>
 
   <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f6f8f3;
+      color: #4a4f46;
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.85;
+    }
 
-  body {
-    font-family: Georgia, serif;
-    background: #f6f8f3;
-    color: #4a4f46;
-    max-width: 820px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.85;
-  }
+    a {
+      color: #6f8f72;
+      text-decoration: none;
+    }
 
-  a {
-    color: #6f8f72;
-    text-decoration: none;
-  }
+    a:hover {
+      color: #4f6f56;
+      text-decoration: underline;
+    }
 
-  a:hover {
-    color: #4f6f56;
-    text-decoration: underline;
-  }
+    .nav-link {
+      display: block;
+      margin-bottom: 25px;
+      color: #7b8f7d;
+    }
 
-  .nav-link {
-    display: block;
-    margin-bottom: 25px;
-    color: #7b8f7d;
-  }
+    .page-title {
+      text-align: center;
+      color: #5f7d65;
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
 
-  .page-title {
-    text-align: center;
-    color: #5f7d65;
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-  }
+    .page-subtitle {
+      text-align: center;
+      color: #7b8f7d;
+      margin-bottom: 8px;
+    }
 
-  .page-subtitle {
-    text-align: center;
-    color: #7b8f7d;
-    margin-bottom: 40px;
-  }
+    .page-author {
+      text-align: center;
+      color: #7b8f7d;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
 
-  .intro {
-    text-align: center;
-    max-width: 620px;
-    margin: 0 auto 50px auto;
-    color: #6f8f72;
-  }
+    .intro {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 50px auto;
+      color: #6f8f72;
+    }
+
+    .notice-box {
+      text-align: center;
+      background: #eef3ea;
+      border: 1px solid #d6e2d3;
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin: 0 auto 40px auto;
+      color: #5f7d65;
+      max-width: 700px;
+    }
+
+    .text-section {
+      margin-top: 50px;
+    }
+
+    .section-heading {
+      text-align: center;
+      color: #5f7d65;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
 
     .poem {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #5a4a42;
-  text-align: center;
-}
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #5a4a42;
+      text-align: center;
+    }
 
-.poem p {
-  margin-bottom: 1.6em;
-}
-  /* STORY CARDS */
+    .poem p {
+      margin-bottom: 1.6em;
+    }
 
-  .story-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
-  }
+    /* STORY CARDS */
 
-  .story-card {
-    background: #eef3ea;
-    border: 1px solid #d6e2d3;
-    border-radius: 14px;
-    padding: 16px;
-    text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-bottom: 50px;
+    }
 
-  .story-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-  }
+    .story-grid a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  .story-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 12px;
-  }
+    .story-card {
+      background: #eef3ea;
+      border: 1px solid #d6e2d3;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
 
-  .story-card h3 {
-    color: #5f7d65;
-    margin-bottom: 8px;
-  }
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
 
-  .story-card p {
-    font-size: 0.95rem;
-    color: #4a4f46;
-  }
+    .story-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
 
+    .story-card h3 {
+      color: #5f7d65;
+      margin-bottom: 8px;
+    }
+
+    .story-card p {
+      font-size: 0.95rem;
+      color: #4a4f46;
+    }
   </style>
 </head>
 
 <body>
 
-<a href="index.html" class="nav-link">← Back to Home</a>
+  <a href="index.html" class="nav-link">← Back to Home</a>
 
-<h1 class="page-title">Children’s Stories</h1>
-<p class="page-subtitle">Oma Robbie Storytime Series</p>
+  <h1 class="page-title">Children’s Stories</h1>
+  <p class="page-subtitle">Oma Robbie Storytime Series</p>
+  <p class="page-author">By Robin K</p>
 
-<p class="intro">
-Playful stories created with warmth, imagination, and a touch of wonder —
-written to be shared, remembered, and loved.
-</p>
+  <p class="intro">
+    Playful stories created with warmth, imagination, and a touch of wonder —
+    written to be shared, remembered, and loved.
+  </p>
 
-<div class="story-grid">
+  <div class="story-grid">
+    <a href="fly-and-frog.html">
+      <div class="story-card">
+        <img src="images/children/fly-frog.jpg" alt="A Fly and a Frog">
+        <h3>A Fly and a Frog</h3>
+        <p>A playful tale of quick thinking, danger, and a very clever escape.</p>
+      </div>
+    </a>
 
-  <a href="fly-and-frog.html">
     <div class="story-card">
-      <img src="images/children/fly-frog.jpg" alt="A Fly and a Frog">
-      <h3>A Fly and a Frog</h3>
-      <p>A playful tale of quick thinking, danger, and a very clever escape.</p>
+      <img src="images/story-coming-soon.jpg" alt="Coming soon">
+      <h3>More Stories Coming</h3>
+      <p>New tales are on their way — stay tuned for more storytime moments.</p>
     </div>
-  </a>
-
-  <div class="story-card">
-    <img src="images/story-coming-soon.jpg" alt="Coming soon">
-    <h3>More Stories Coming</h3>
-    <p>New tales are on their way — stay tuned for more storytime moments.</p>
   </div>
 
-</div>
+  <div class="notice-box">
+    This webpage is still growing — more images and a small video for the poem will appear soon.
+  </div>
 
-   <a href="index.html" class="nav-link">← Back to Home</a>
+  <div class="text-section">
+    <h2 id="contents" class="section-heading">A Fly and a Frog</h2>
 
-  <h1 class="page-title">Children's Stories</h1>
-<p class="page-subtitle">Oma Robbie Stories</p>
-<p class="page-author">By Robin K</p>
+    <div class="poem">
+      <p>
+        I heard a fly scream, its small voice so shrill,<br>
+        As it buzzed by a stream at the foot of a hill.<br>
+        “Save me, dear Robbie, from that frog’s greedy stare,<br>
+        He wants to eat me—it’s more than I can bear!”
+      </p>
 
-   <!-- WELCOME -->
-  
-<div class="notice-box">
-  This webpage is still growing — more images and a small video for the poem will appear soon.
-</div>
+      <p>
+        “Quick, little fly, buzz up to that tree,”<br>
+        I said, “Hide by the bank where no one can see."<br>
+        Stay silent and still, don’t flutter a wing,<br>
+        Be brave, and that frog won’t see a thing.”
+      </p>
 
-  <!-- CONTENTS -->
+      <p>
+        The hungry frog’s eyes bulged as he looked all around,<br>
+        The little fly stayed still, not making a sound.<br>
+        No snack for that froggie who lurked by the stream,<br>
+        That brave little fly outsmarted his scheme.
+      </p>
 
-<div class="text-section">
-  <h2 id="contents" class="section-heading">A Fly and a Frog</h2>
-
-
-  <div class="poem">
-  <p>
-    I heard a fly scream, its small voice so shrill,<br>
-    As it buzzed by a stream at the foot of a hill.<br>
-    “Save me, dear Robbie, from that frog’s greedy stare,<br>
-    He wants to eat me—it’s more than I can bear!”
-  </p>
-
-  <p>
-    “Quick, little fly, buzz up to that tree,”<br>
-    I said, “Hide by the bank where no one can see.<br>
-    Stay silent and still, don’t flutter a wing,<br>
-    Be brave, and that frog won’t see a thing.”
-  </p>
-
-  <p>
-    The hungry frog’s eyes bulged as he looked all around,<br>
-    The little fly stayed still, not making a sound.<br>
-    No snack for that froggie who lurked by the stream,<br>
-    That brave little fly outsmarted his scheme.
-  </p>
-
-  <p>
-    Then a big red-eyed blowfly flew past Froggie so fast,<br>
-    That goggly-eyed frog snapped it up—quick as could be.<br>
-    Our little fly buzzed as he zoomed all around,<br>
-    Safe by the stream—with a cheeky buzzzz sound!
-  </p>
-</div>
-
+      <p>
+        Then a big red-eyed blowfly flew past Froggie so fast,<br>
+        That goggly-eyed frog snapped it up—quick as could be.<br>
+        Our little fly buzzed as he zoomed all around,<br>
+        Safe by the stream—with a cheeky buzzzz sound!
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
