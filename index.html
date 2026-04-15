@@ -115,13 +115,14 @@ h2 {
 
 .card img {
   width: 100%;
+  max-width: 600px;  
   height: 160px;
   object-fit: cover;
   object-position: center;
   border-radius: 16px;
   background: #f8efe2;
   display: block;
-  margin-bottom: 12px;
+  margin: 0 auto 12px; 
   filter: brightness(0.95);
   transition: transform 0.25s ease;
 }
@@ -208,16 +209,16 @@ h2 {
   }
 }
 
+@media (min-width: 800px) {
+  .card img {
+    height: 180px;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 17px;
     line-height: 1.75;
-  }
-
-
-  body {
-    font-size: 18px;
-    line-height: 1.85;
   }
 
   .hero h1 {
