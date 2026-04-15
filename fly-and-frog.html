@@ -4,9 +4,10 @@
     background: #f6f8f3;
     color: #4a4f46;
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.85;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    padding: 0 14px;
+    margin: 20px auto;
   }
 
   a {
@@ -28,20 +29,22 @@
   .page-title {
     text-align: center;
     color: #5f7d65;
-    font-size: 2.4rem;
+     font-size: 2rem;
+    line-height: 1.3;
     margin-bottom: 8px;
   }
 
   .page-subtitle {
     text-align: center;
     color: #7b8f7d;
+    font-size: 1.05rem;
     margin-bottom: 8px;
   }
 
   .page-author {
     text-align: center;
     color: #7b8f7d;
-    margin-bottom: 40px;
+    margin-bottom: 26px;
     font-size: 0.95rem;
   }
 
@@ -70,98 +73,100 @@
     display: block;
   }
 
+  /* Book layout becomes vertical */
+  
   .book {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0;
     background: #fdfbf6;
     border: 1px solid #e5ded1;
-    border-radius: 22px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 14px 30px rgba(0,0,0,0.08);
     position: relative;
-    min-height: 560px;
+    min-height: auto;
   }
 
-  .book::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, #d7cfbf 12%, #d7cfbf 88%, transparent);
-    z-index: 2;
-  }
-
+   /* Remove spine effect on mobile */
+ .book::before,
   .book::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 18px);
-    width: 36px;
-    background: linear-gradient(to right, rgba(0,0,0,0.05), rgba(255,255,255,0.02), rgba(0,0,0,0.05));
-    opacity: 0.18;
-    pointer-events: none;
-    z-index: 1;
+    display: none;
   }
 
+.book::before,
+  .book::after {
+    display: none;
+  }
+  
+/* Page spacing */
   .page {
-    padding: 42px 34px 58px 34px;
+    padding: 28px 18px 44px 18px;
     position: relative;
     background: #fffdf8;
   }
 
+  /* STORY TEXT — this is the magic part */
   .text-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     color: #5a4a42;
-    font-size: 1.08rem;
-    line-height: 2;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    line-height: 1.9;
+    max-width: 480px;
+    margin: 0 auto;
+} 
+
+   /* Make poem feel like a book */
+  .text-page p {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
+ /* Image layout */
   .image-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #fcfaf4;
-    padding: 34px 26px 54px 26px;
+    padding: 24px 16px 40px;
   }
 
   .image-pair {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     width: 100%;
-    max-width: 340px;
+    max-width: 100%;
   }
 
   .image-card {
     background: #fffdf8;
     border: 1px solid #e8e0d4;
-    border-radius: 18px;
-    padding: 10px;
+    border-radius: 14px;
+    padding: 8px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.06);
   }
 
   .image-card img {
     width: 100%;
-    height: 170px;
+    height: 190px;
     object-fit: cover;
     display: block;
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
+   /* Caption */
   .image-caption {
     text-align: center;
     color: #7b8f7d;
-    font-size: 0.95rem;
+    font-size: 1rem;
     max-width: 320px;
-    margin-top: 14px;
+    margin-top: 12px;
     line-height: 1.6;
   }
 
@@ -175,8 +180,8 @@
 
   .page-number {
     position: absolute;
-    bottom: 18px;
-    font-size: 0.92rem;
+    bottom: 12px;
+    font-size: 0.9rem;
     color: #9aa393;
   }
 
@@ -188,6 +193,7 @@
     right: 28px;
   }
 
+   /* Controls */
   .book-controls {
     display: flex;
     justify-content: center;
@@ -202,8 +208,8 @@
     color: #5f7d65;
     border: 1px solid #d6e2d3;
     border-radius: 999px;
-    padding: 10px 18px;
-    font-size: 0.96rem;
+    padding: 12px 20px;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
@@ -224,7 +230,7 @@
     text-align: center;
     margin-top: 14px;
     color: #7b8f7d;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   @keyframes fadeTurn {
@@ -262,7 +268,7 @@
 
     .text-page {
       border-bottom: 1px solid #ece4d7;
-    }
+    }   
   }
 </style>
 
