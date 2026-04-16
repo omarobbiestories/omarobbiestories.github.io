@@ -29,7 +29,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
 /* LAYOUT SECTIONS */
 
 .container {
@@ -53,10 +52,11 @@ a:hover {
 }
 
  .grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin-bottom: 36px;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 36px;
+}
 
 
 /* HEADINGS AND TEXT */
@@ -137,10 +137,12 @@ h2 {
 }
 
 .card h3 {
-  margin-top: 4px;
-  margin-bottom: 6px;
+  margin: 4px 0 6px;
   color: #7d4f3f;
   font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: 0;
   text-align: center;
 }
 
@@ -244,10 +246,14 @@ h2 {
 
 /* Mobile */
 @media (max-width: 600px) {
-  body {
-    font-size: 1.1rem;
-    line-height: 1.75;
+  .card h3,
+  .story-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: 0;
   }
+}
 
 
   .grid {
@@ -359,7 +365,6 @@ h2 {
         <img src="images/poetry.jpg" alt="Poetry">
         <h3>Poetry</h3>
         <p>A collection of poems and poetic reflections, gathered with feeling and imagination.</p>
-     <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
   </div>
 </a>
 
@@ -368,7 +373,6 @@ h2 {
         <img src="images/autobiography.jpg" alt="Father's autobiography">
         <h3>My Father’s Autobiography</h3>
         <p>A meaningful life story preserved with care, memory, and family love.</p>
-   <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
   </div>
 </a>
 
@@ -377,7 +381,6 @@ h2 {
         <img src="images/art-murals.jpg" alt="Art and murals">
         <h3>Art &amp; Murals</h3>
         <p>A gallery of creative expression through art, painting, and mural work.</p>
-    <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
   </div>
 </a>
 
@@ -386,8 +389,6 @@ h2 {
         <img src="images/photography.jpg" alt="Photography">
         <h3>Photography</h3>
         <p>A thoughtful collection of images captured by Oma Robbie.</p>
-        <p><a href="photography.html">View gallery →</a></p>
-     <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
   </div>
 </a>
 
