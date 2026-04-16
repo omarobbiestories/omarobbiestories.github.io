@@ -150,6 +150,31 @@ h2 {
   font-size: 0.98rem;
 }
 
+  .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+.card-cta {
+  display: inline-block;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.card-link:hover .arrow {
+  transform: translateX(6px);
+}
+  .card-link:hover .card-cta {
+  transform: translateY(-1px);
+}
+
 
 /* SPECIAL BLOCKS */
 
@@ -311,50 +336,60 @@ h2 {
     <h2>My Creative World</h2>
     <div class="grid">
 
-      <div class="card">
+     <a href="children.html" class="card-link">
+     <div class="card">
         <img src="images/childrens-stories.jpg" alt="Children's stories">
         <h3>Children’s Stories</h3>
         <p>Gentle stories for little hearts, created with warmth, imagination, and wonder.</p>
-        <p><a href="children.html">Open this work →</a></p>
-      </div>
+       <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
+  </div>
+</a>
 
+      <a href="mandela.html" class="card-link">
       <div class="card">
         <img src="images/mandela-lion-lamb.jpg" alt="Mandela Effect composition">
         <h3>Mandela Effect</h3>
         <p>A reflective composition exploring memory, mystery, and the Mandela Effect.</p>
-        <p><a href="mandela.html">Open this work →</a></p>
-      </div>
+       <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
+  </div>
+</a>
 
-      <div class="card">
-        <img src="images/youtube-storytime.jpg" alt="YouTube Storytime">
-        <h3>YouTube</h3>
-        <p>Oma Robbie Storytime — gentle storytelling and creative videos shared on YouTube.</p>
-      </div>
-
+      <a href="Poetry.html" class="card-link">
       <div class="card">
         <img src="images/poetry.jpg" alt="Poetry">
         <h3>Poetry</h3>
         <p>A collection of poems and poetic reflections, gathered with feeling and imagination.</p>
-      </div>
+     <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
+  </div>
+</a>
 
+      <a href="Autobiography.html" class="card-link">
       <div class="card">
         <img src="images/autobiography.jpg" alt="Father's autobiography">
         <h3>My Father’s Autobiography</h3>
         <p>A meaningful life story preserved with care, memory, and family love.</p>
-      </div>
+   <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
+  </div>
+</a>
 
+      <a href="Art.html" class="card-link">
       <div class="card">
         <img src="images/art-murals.jpg" alt="Art and murals">
         <h3>Art &amp; Murals</h3>
         <p>A gallery of creative expression through art, painting, and mural work.</p>
-      </div>
+    <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
+  </div>
+</a>
 
+       <a href="Photography.html" class="card-link">
       <div class="card">
         <img src="images/photography.jpg" alt="Photography">
         <h3>Photography</h3>
         <p>A thoughtful collection of images captured by Oma Robbie.</p>
         <p><a href="photography.html">View gallery →</a></p>
-      </div>
+     <p><span class="card-cta">Open this work <span class="arrow">→</span></span></p>
+  </div>
+</a>
 
     </div>
   </section>
