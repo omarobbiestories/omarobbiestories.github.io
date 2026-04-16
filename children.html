@@ -160,6 +160,10 @@
         gap: 16px;
         margin-bottom: 34px;
       }
+      .story-grid a:hover .arrow {
+  transform: translateX(6px);
+  opacity: 0.85;
+}
 
       .story-card {
         padding: 14px;
@@ -179,6 +183,20 @@
         font-size: 0.95rem;
         line-height: 1.65;
       }
+
+      .story-cta {
+  display: inline-block;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Trigger animation when hovering the whole card */
+.story-grid a:hover .arrow {
+  transform: translateX(6px);
+}
     }
   </style>
 </head>
@@ -205,9 +223,12 @@
       <div class="story-card">
         <img src="images/children/fly-frog.jpg" alt="A Fly and a Frog">
         <h3>A Fly and a Frog</h3>
-        <p>A playful tale of quick thinking, danger, and a very clever escape.</p>
-      </div>
-    </a>
+<p>
+  <span class="story-cta">
+    A playful tale of quick thinking, danger, and a very clever escape 
+    <span class="arrow">→</span>
+  </span>
+</p>
 
     <div class="story-card">
       <img src="images/story-coming-soon.jpg" alt="Coming soon">
