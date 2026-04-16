@@ -115,18 +115,16 @@ h2 {
 
 .card img {
   width: 100%;
-  max-width: 600px;  
-  height: 160px;
-  object-fit: cover;
-  object-position: center;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
   border-radius: 16px;
   background: #f8efe2;
-  display: block;
-  margin: 0 auto 12px; 
   filter: brightness(0.95);
   transition: transform 0.25s ease;
 }
-
+  
 .card:hover img {
   transform: scale(1.03);
 }
@@ -234,13 +232,6 @@ h2 {
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-   }
-
-/* Desktop tweak */
-@media (min-width: 800px) {
-  .card img {
-    height: 180px;
   }
    }
 
