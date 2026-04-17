@@ -592,6 +592,69 @@ hr {
   object-fit: contain;
 }
 
+.page-author {
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: 1.05rem;
+  margin: -10px 0 22px;
+}
+
+.part-heading {
+  text-align: center;
+  color: var(--text-warm);
+  font-size: 1rem;
+  margin: 0 0 30px;
+  letter-spacing: 0.3px;
+}
+
+.text-section {
+  margin-top: 34px;
+  margin-bottom: 42px;
+}
+
+.back-link {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.quote-author {
+  max-width: 620px;
+  margin: 8px auto 20px;
+  text-align: right;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  font-style: normal;
+}
+
+.archive-caption {
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-soft);
+}
+
+.article-page em {
+  color: var(--text-warm);
+}
+
+@media (max-width: 560px) {
+  .page-author,
+  .part-heading,
+  .source-note,
+  .quote-author,
+  .archive-caption,
+  .back-link {
+    font-size: 0.95rem;
+  }
+
+  .text-section {
+    margin-top: 28px;
+    margin-bottom: 34px;
+  }
+}
+
 
 /* =========================================================
    9. GENERIC IMAGE GALLERIES
