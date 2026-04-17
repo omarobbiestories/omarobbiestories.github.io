@@ -1,313 +1,484 @@
+<html>
 <style>
+
+/* --------------------------------------------------
+   1. PAGE FOUNDATION
+-------------------------------------------------- */
+
+body {
+  font-family: Georgia, serif;
+  background: #f6f8f3;
+  color: #4a4f46;
+  max-width: 1200px;
+  margin: 26px auto;
+  padding: 0 18px;
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+a {
+  color: #6f8f72;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4f6f56;
+  text-decoration: underline;
+}
+
+
+/* --------------------------------------------------
+   2. TOP NAVIGATION / PAGE HEADINGS
+-------------------------------------------------- */
+
+.nav-link {
+  display: inline-block;
+  margin: 0 0 24px 0;
+  color: #6f8f72;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.page-title {
+  text-align: center;
+  color: #5f7d65;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #7b8f7d;
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+}
+
+.page-author {
+  text-align: center;
+  color: #7b8f7d;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+.notice-box {
+  text-align: center;
+  background: #eef3ea;
+  border: 1px solid #d6e2d3;
+  border-radius: 14px;
+  padding: 15px 20px;
+  margin: 0 auto 30px auto;
+  color: #5f7d65;
+  max-width: 760px;
+  font-size: 1rem;
+}
+
+
+/* --------------------------------------------------
+   3. STORYBOOK OUTER SHELL
+-------------------------------------------------- */
+
+.book-shell {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------
+   4. SWIPEABLE STORYBOOK
+   - natural finger swipe
+   - each page snaps like a book
+-------------------------------------------------- */
+
+.storybook {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  gap: 0;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  border: 1px solid #e5ded1;
+  background: #fdfbf6;
+}
+
+.storybook::-webkit-scrollbar {
+  height: 10px;
+}
+
+.storybook::-webkit-scrollbar-thumb {
+  background: #d8dfd2;
+  border-radius: 999px;
+}
+
+
+/* --------------------------------------------------
+   5. EACH BOOK PAGE
+-------------------------------------------------- */
+
+.book-page {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 680px;
+  box-sizing: border-box;
+  background: #fffdf8;
+  padding: 42px 34px 58px 34px;
+  position: relative;
+}
+
+
+/* --------------------------------------------------
+   6. FRONT COVER / BACK COVER
+   - includes space for image
+-------------------------------------------------- */
+
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #fcfaf4;
+}
+
+.cover-page h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #5f7d65;
+  margin-bottom: 12px;
+}
+
+.cover-page .subtitle {
+  font-size: 1.2rem;
+  color: #7a6a5f;
+  margin-bottom: 18px;
+}
+
+.cover-page .cover-text {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #5a4a42;
+  line-height: 1.8;
+}
+
+.cover-image-space {
+  width: 100%;
+  max-width: 520px;
+  margin: 26px auto 0 auto;
+  background: #fffdf8;
+  border: 1px solid #e8e0d4;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.cover-image-space img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: #f7f3eb;
+}
+
+
+/* --------------------------------------------------
+   7. INSIDE STORY PAGES
+-------------------------------------------------- */
+
+.book {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 100%;
+}
+
+.text-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #5a4a42;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding-right: 18px;
+  border-right: 1px solid #ece4d7;
+}
+
+.text-page p {
+  max-width: 92%;
+  margin: 0 auto;
+}
+
+.image-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fcfaf4;
+  padding-left: 18px;
+}
+
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.image-card {
+  background: #fffdf8;
+  border: 1px solid #e8e0d4;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  background: #f7f3eb;
+}
+
+.image-caption {
+  text-align: center;
+  color: #7b8f7d;
+  font-size: 1rem;
+  max-width: 360px;
+  margin-top: 16px;
+  line-height: 1.65;
+}
+
+.spread-label {
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #97a18f;
+  margin-bottom: 18px;
+}
+
+
+/* --------------------------------------------------
+   8. PAGE NUMBERS
+-------------------------------------------------- */
+
+.page-number {
+  position: absolute;
+  bottom: 14px;
+  font-size: 0.95rem;
+  color: #9aa393;
+}
+
+.page-number.left {
+  left: 30px;
+}
+
+.page-number.right {
+  right: 30px;
+}
+
+
+/* --------------------------------------------------
+   9. PAGE TURN LINKS
+   - use as links, not buttons
+-------------------------------------------------- */
+
+.book-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.page-link {
+  display: inline-block;
+  background: #eef3ea;
+  color: #5f7d65;
+  border: 1px solid #d6e2d3;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  text-decoration: none;
+}
+
+.spread-counter {
+  text-align: center;
+  margin-top: 14px;
+  color: #7b8f7d;
+  font-size: 1rem;
+}
+
+
+/* --------------------------------------------------
+   10. OPTIONAL SWIPE HINT
+-------------------------------------------------- */
+
+.swipe-hint {
+  text-align: center;
+  color: #8a9485;
+  font-size: 0.95rem;
+  margin: 10px 0 0 0;
+}
+
+
+/* --------------------------------------------------
+   11. TABLET
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
   body {
-    font-family: Georgia, serif;
-    background: #f6f8f3;
-    color: #4a4f46;
-    max-width: 1200px;
-    font-size: 1.2rem;
-    line-height: 1.85;
-    padding: 0 18px;
-    margin: 26px auto;
-  }
-
-  a {
-    color: #6f8f72;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #4f6f56;
-    text-decoration: underline;
-  }
-
-  .nav-link {
-    display: inline-block;
-    margin: 0 0 30px 0;
-    color: #6f8f72;
-    font-size: 1.08rem;
-    font-weight: 600;
-    letter-spacing: 0.2px;
+    font-size: 1.1rem;
+    padding: 0 12px;
+    margin: 18px auto;
   }
 
   .page-title {
-    text-align: center;
-    color: #5f7d65;
-    font-size: 2.4rem;
-    line-height: 1.25;
-    margin-bottom: 8px;
+    font-size: 2rem;
   }
 
-  .page-subtitle {
-    text-align: center;
-    color: #7b8f7d;
-    font-size: 1.12rem;
-    margin-bottom: 8px;
-  }
-
-  .page-author {
-    text-align: center;
-    color: #7b8f7d;
-    margin-bottom: 28px;
-    font-size: 1rem;
-  }
-
-  .notice-box {
-    text-align: center;
-    background: #eef3ea;
-    border: 1px solid #d6e2d3;
-    border-radius: 14px;
-    padding: 15px 20px;
-    margin: 0 auto 38px auto;
-    color: #5f7d65;
-    max-width: 760px;
-    font-size: 1rem;
-  }
-
-  .book-shell {
-    max-width: 1040px;
-    margin: 0 auto;
-  }
-
-  .spread {
-    display: none;
-    animation: fadeTurn 0.45s ease;
-  }
-
-  .spread.active {
-    display: block;
+  .book-page {
+    min-height: auto;
+    padding: 28px 20px 46px 20px;
   }
 
   .book {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #fdfbf6;
-    border: 1px solid #e5ded1;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
-    position: relative;
-  }
-
-  .page {
-    padding: 42px 34px 58px 34px;
-    position: relative;
-    background: #fffdf8;
-    min-height: 680px;
+    grid-template-columns: 1fr;
   }
 
   .text-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: #5a4a42;
-    font-size: 1.3rem;
-    line-height: 2;
-    border-right: 1px solid #ece4d7;
-  }
-
-  .text-page p {
-    max-width: 92%;
-    margin: 0 auto;
+    font-size: 1.18rem;
+    line-height: 1.85;
+    border-right: none;
+    border-bottom: 1px solid #ece4d7;
+    padding-right: 0;
+    padding-bottom: 18px;
   }
 
   .image-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #fcfaf4;
+    padding-left: 0;
+    padding-top: 18px;
   }
 
   .image-pair {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .image-card {
-    background: #fffdf8;
-    border: 1px solid #e8e0d4;
-    border-radius: 14px;
-    padding: 10px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    max-width: 440px;
   }
 
   .image-card img {
-    width: 100%;
-    height: auto;
-    max-height: 240px;
-    object-fit: contain;
-    display: block;
-    border-radius: 10px;
-    background: #f7f3eb;
+    max-height: none;
+  }
+}
+
+
+/* --------------------------------------------------
+   12. MOBILE
+   - reduced padding
+   - larger usable text area
+   - less empty border space
+-------------------------------------------------- */
+
+@media (max-width: 560px) {
+  body {
+    font-size: 1.02rem;
+    padding: 0 8px;
+    margin: 10px auto;
+    line-height: 1.72;
   }
 
-  .image-caption {
-    text-align: center;
-    color: #7b8f7d;
+  .nav-link {
     font-size: 1rem;
-    max-width: 360px;
-    margin-top: 16px;
-    line-height: 1.65;
-  }
-
-  .spread-label {
-    font-size: 0.95rem;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: #97a18f;
     margin-bottom: 18px;
   }
 
+  .page-title {
+    font-size: 1.72rem;
+    margin-bottom: 6px;
+  }
+
+  .page-subtitle,
+  .page-author,
+  .notice-box,
+  .image-caption,
+  .spread-counter,
+  .swipe-hint {
+    font-size: 0.94rem;
+  }
+
+  .book-page {
+    padding: 16px 12px 38px 12px;
+  }
+
+  .cover-page h1 {
+    font-size: 2rem;
+  }
+
+  .cover-page .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .cover-image-space {
+    margin-top: 18px;
+    padding: 8px;
+  }
+
+  .text-page {
+    font-size: 1.08rem;
+    line-height: 1.72;
+  }
+
+  .text-page p {
+    max-width: 98%;
+  }
+
+  .image-card {
+    padding: 8px;
+  }
+
+  .spread-label {
+    font-size: 0.82rem;
+    margin-bottom: 12px;
+  }
+
   .page-number {
-    position: absolute;
-    bottom: 14px;
-    font-size: 0.95rem;
-    color: #9aa393;
+    font-size: 0.84rem;
+    bottom: 10px;
   }
 
   .page-number.left {
-    left: 30px;
+    left: 14px;
   }
 
   .page-number.right {
-    right: 30px;
+    right: 14px;
   }
 
   .book-controls {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 24px;
-    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
   }
 
-  .book-controls button {
-    font-family: Georgia, serif;
-    background: #eef3ea;
-    color: #5f7d65;
-    border: 1px solid #d6e2d3;
-    border-radius: 999px;
-    padding: 14px 24px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .book-controls button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  }
-
-  .book-controls button:disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-  }
-
-  .spread-counter {
+  .page-link {
+    width: 100%;
+    max-width: 240px;
     text-align: center;
-    margin-top: 14px;
-    color: #7b8f7d;
-    font-size: 1rem;
+    font-size: 0.98rem;
+    padding: 11px 16px;
   }
+}
 
-  @keyframes fadeTurn {
-    0% {
-      opacity: 0;
-      transform: translateX(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @media (max-width: 900px) {
-    body {
-      font-size: 1.12rem;
-      padding: 0 14px;
-      margin: 18px auto;
-    }
-
-    .nav-link {
-      font-size: 1.05rem;
-      margin-bottom: 24px;
-    }
-
-    .page-title {
-      font-size: 2rem;
-    }
-
-    .book {
-      grid-template-columns: 1fr;
-    }
-
-    .page {
-      min-height: auto;
-      padding: 30px 22px 52px 22px;
-    }
-
-    .text-page {
-      font-size: 1.2rem;
-      line-height: 1.9;
-      border-right: none;
-      border-bottom: 1px solid #ece4d7;
-    }
-
-    .image-pair {
-      max-width: 440px;
-    }
-
-    .image-card img {
-      max-height: none;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .book-controls button {
-      width: 100%;
-      max-width: 280px;
-      font-size: 1.02rem;
-      padding: 14px 18px;
-    }
-  }
-
-  @media (max-width: 560px) {
-    body {
-      font-size: 1.08rem;
-    }
-
-    .page-title {
-      font-size: 1.75rem;
-    }
-
-    .page-subtitle,
-    .page-author,
-    .notice-box,
-    .image-caption,
-    .spread-counter {
-      font-size: 0.98rem;
-    }
-
-    .text-page {
-      font-size: 1.12rem;
-      line-height: 1.82;
-    }
-
-    .spread-label {
-      font-size: 0.85rem;
-    }
-
-    .page-number {
-      font-size: 0.88rem;
-    }
-  }
 </style>
 
 <body>
@@ -325,6 +496,13 @@
   <div class="book-shell">
 
     <!-- SPREAD 1 -->
+
+     <!-- FRONT COVER -->
+  <section class="page cover">
+    <h1>A Fly and a Frog</h1>
+    <p class="subtitle">A gentle tale by Robin K</p>
+  </section>
+    
 <div class="spread active">
   <div class="book">
     <div class="page text-page">
@@ -454,14 +632,23 @@
         <div class="image-card">
           <img src="images/children/fly-cheeky-close.jpg" alt="A closer view of the little fly buzzing cheekily while the frog is distracted">
         </div>
-      </div>
+     
 
       <p class="image-caption">
         Safe at last, the little fly gives a cheeky buzz while Froggie misses his chance.
       </p>
       <div class="page-number right">8</div>
     </div>
+>
+  
+   <!-- BACK COVER -->
+  <section class="page cover">
+    <div class="page image-page">
+    <p>The little fly is safe… for now.</p>
+    <p class="author">Oma Robbie Stories</p>
+  </section>
   </div>
+ </div
 </div>
 
     <div class="book-controls">
