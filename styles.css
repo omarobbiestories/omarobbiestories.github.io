@@ -147,6 +147,13 @@ hr {
   line-height: 1.25;
 }
 
+.section-heading {
+  text-align: center;
+  color: #5f7d65;
+  font-size: 1.9rem;
+  margin: 50px 0 25px;
+}
+
 .sub-heading {
   color: var(--text-subtle);
   font-size: 1.22rem;
