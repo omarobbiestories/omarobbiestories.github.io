@@ -454,72 +454,86 @@ a:hover {
    12. MOBILE
 ======================================== */
 
+/* ========================================
+   12. MOBILE (IMPROVED READABILITY)
+======================================== */
+
 @media (max-width: 560px) {
   body {
-    font-size: 1.02rem;
-    padding: 0 8px;
-    margin: 10px auto;
-    line-height: 1.72;
+    font-size: 1.18rem;   /* was 1.02 */
+    padding: 0 10px;
+    margin: 12px auto;
+    line-height: 1.8;
   }
 
-.nav-link {
-  font-size: 1rem;
-  margin-bottom: 18px;
-}
+  /* 🔹 BACK LINK (VERY IMPORTANT) */
+  .nav-link {
+    font-size: 1.22rem;   /* was 1rem */
+    margin-bottom: 20px;
+  }
 
+  /* 🔹 MAIN TITLE */
   .page-title {
-    font-size: 1.72rem;
-    margin-bottom: 6px;
+    font-size: 2.1rem;    /* was 1.72 */
+    margin-bottom: 8px;
   }
 
-  .page-subtitle,
-  .page-author,
-  .notice-box,
-  .image-caption,
-  .spread-counter,
-  .swipe-hint {
-    font-size: 0.94rem;
+  /* 🔹 SUBTITLE + AUTHOR */
+  .page-subtitle {
+    font-size: 1.12rem;   /* was 0.94 */
   }
 
-  .book-page {
-    padding: 16px 12px 38px 12px;
+  .page-author {
+    font-size: 1.08rem;   /* was 0.94 */
   }
 
+  /* 🔹 COVER TEXT */
   .cover-title {
-    font-size: 2rem;
+    font-size: 2.3rem;    /* was 2rem */
   }
 
   .cover-subtitle {
-    font-size: 1.05rem;
+    font-size: 1.15rem;   /* was 1.05 */
   }
 
-  .cover-image-space {
-    margin-top: 18px;
-    padding: 8px;
-  }
-
+  /* 🔹 STORY TEXT (KEY FIX) */
   .text-page {
-    font-size: 1.08rem;
-    line-height: 1.72;
+    font-size: 1.28rem;   /* was 1.08 → BIG improvement */
+    line-height: 1.9;
+  }
+
+  /* 🔹 IMAGE CAPTIONS */
+  .image-caption {
+    font-size: 1.05rem;   /* was 0.94 */
+  }
+
+  /* 🔹 NOTICE + SMALL TEXT */
+  .notice-box,
+  .spread-counter,
+  .swipe-hint {
+    font-size: 1.02rem;
+  }
+
+  .book-page {
+    padding: 18px 14px 42px 14px;
   }
 
   .text-page p {
-    max-width: 98%;
+    max-width: 100%;
   }
 
   .image-card {
-    padding: 8px;
+    padding: 10px;
   }
 
   .spread-label {
-    font-size: 0.82rem;
-    margin-bottom: 12px;
+    font-size: 0.9rem;
   }
 
   .page-number {
     right: 14px;
     bottom: 10px;
-    font-size: 0.84rem;
+    font-size: 0.9rem;
   }
 
   .book-controls {
@@ -529,10 +543,10 @@ a:hover {
 
   .page-link {
     width: 100%;
-    max-width: 240px;
+    max-width: 260px;
     text-align: center;
-    font-size: 0.98rem;
-    padding: 11px 16px;
+    font-size: 1.05rem;
+    padding: 12px 18px;
   }
 }
 
