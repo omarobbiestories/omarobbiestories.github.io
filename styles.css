@@ -535,6 +535,7 @@ hr {
 .article-page {
   max-width: var(--max-narrow);
   margin: 0 auto;
+  padding: 10px 6px;
 }
 
 .article-page p {
