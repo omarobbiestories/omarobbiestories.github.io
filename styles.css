@@ -713,6 +713,13 @@ hr {
   color: var(--text-soft);
 }
 
+.coming-soon {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #8a8f86;
+  font-style: italic;
+}
+
 
 /* =========================================================
    11. TABLET
