@@ -354,11 +354,11 @@ a:hover {
     display: block;
   }
 
-  .default-page {
+  .book-page.default-page:not(:target) {
     display: block;
   }
 
-  .storybook:has(.book-page:target) .default-page {
+  .storybook:has(.book-page:target) .book-page.default-page {
     display: none;
   }
 
@@ -628,7 +628,7 @@ a:hover {
   <a href="#cover">← Previous Spread</a>
   <a href="#page2">Next Spread →</a>
 </div>
-        <div class="page-number right">1</div>
+        <div class="page-number">1</div>
       </section>
 
       <!-- ========================================
@@ -668,7 +668,7 @@ a:hover {
   <a href="#page1">← Previous Spread</a>
   <a href="#page3">Next Spread →</a>
 </div>
-        <div class="page-number right">2</div>
+        <div class="page-number">2</div>
       </section>
 
       <!-- ========================================
@@ -708,7 +708,7 @@ a:hover {
   <a href="#page2">← Previous Spread</a>
   <a href="#page4">Next Spread →</a>
 </div>
-        <div class="page-number right">3</div>
+        <div class="page-number">3</div>
       </section>
 
       <!-- ========================================
@@ -748,7 +748,7 @@ a:hover {
   <a href="#page3">← Previous Spread</a>
   <a href="#back-cover">Next Spread →</a>
 </div>
-        <div class="page-number right">4</div>
+        <div class="page-number">4</div>
       </section>
 
       <!-- ========================================
