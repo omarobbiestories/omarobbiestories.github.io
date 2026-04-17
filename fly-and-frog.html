@@ -323,7 +323,74 @@ a:hover {
   color: #7b8f7d;
   font-size: 1rem;
 }
+   
+/* ========================================
+   DESKTOP ONLY
+   Show one page at a time like a book
+======================================== */
 
+@media (min-width: 901px) {
+  .storybook {
+    display: block;
+    overflow: hidden;
+    scroll-snap-type: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  .book-page {
+    display: none;
+    max-width: 1040px;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e5ded1;
+    background: #fdfbf6;
+  }
+
+  .book-page:target {
+    display: block;
+  }
+
+  .default-page {
+    display: block;
+  }
+
+  .storybook:has(.book-page:target) .default-page {
+    display: none;
+  }
+
+  .spread-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .spread-nav a {
+    display: inline-block;
+    background: #eef3ea;
+    color: #5f7d65;
+    border: 1px solid #d6e2d3;
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .spread-nav a:hover {
+    background: #e6ede2;
+    text-decoration: none;
+  }
+
+  .book-controls,
+  .spread-counter {
+    display: none;
+  }
+}
 
 /* ========================================
    11. TABLET
@@ -496,7 +563,7 @@ a:hover {
       <!-- ========================================
            5A. FRONT COVER
       ========================================= -->
-      <section class="book-page cover-page" id="cover">
+      <section class="book-page cover-page default-page" id="cover">
         <h2 class="cover-title">A Fly and a Frog</h2>
         <p class="cover-subtitle">A gentle tale by Robin K</p>
 
@@ -507,7 +574,10 @@ a:hover {
         <p class="cover-text">
           A gentle story by the stream, with one little fly and one very greedy frog.
         </p>
-
+<div class="spread-nav">
+  <span></span>
+  <a href="#page1">Next Spread →</a>
+</div>
         <p class="swipe-hint">Swipe to turn the page →</p>
       </section>
 
@@ -544,7 +614,10 @@ a:hover {
             </p>
           </div>
         </div>
-
+<div class="spread-nav">
+  <a href="#cover">← Previous Spread</a>
+  <a href="#page2">Next Spread →</a>
+</div>
         <div class="page-number right">1</div>
       </section>
 
@@ -581,7 +654,10 @@ a:hover {
             </p>
           </div>
         </div>
-
+<div class="spread-nav">
+  <a href="#page1">← Previous Spread</a>
+  <a href="#page3">Next Spread →</a>
+</div>
         <div class="page-number right">2</div>
       </section>
 
@@ -618,7 +694,10 @@ a:hover {
             </p>
           </div>
         </div>
-
+<div class="spread-nav">
+  <a href="#page2">← Previous Spread</a>
+  <a href="#page4">Next Spread →</a>
+</div>
         <div class="page-number right">3</div>
       </section>
 
@@ -655,7 +734,10 @@ a:hover {
             </p>
           </div>
         </div>
-
+<div class="spread-nav">
+  <a href="#page3">← Previous Spread</a>
+  <a href="#back-cover">Next Spread →</a>
+</div>
         <div class="page-number right">4</div>
       </section>
 
@@ -672,7 +754,10 @@ a:hover {
         <p class="cover-text">The little fly is safe… for now.</p>
         <p class="cover-text">Oma Robbie Stories</p>
       </section>
-
+<div class="spread-nav">
+  <a href="#page4">← Previous Spread</a>
+  <a href="#cover">Front Cover</a>
+</div>
     </div>
 
     <!-- ========================================
