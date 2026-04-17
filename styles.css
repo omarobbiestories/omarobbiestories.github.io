@@ -263,7 +263,32 @@ hr {
 .card a {
   font-weight: bold;
 }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-cta {
+  display: inline-block;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.card-link:hover .arrow {
+  transform: translateX(6px);
+}
+
+.card-link:hover .card-cta {
+  transform: translateY(-1px);
+}
 
 /* =========================================================
    6. CHILDREN'S STORIES PAGE
@@ -579,6 +604,13 @@ hr {
   color: var(--text-soft);
   font-size: 0.98rem;
   margin: 3rem 0 2rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.98rem;
+  margin: 3rem 0 2rem;
+  color: var(--text-soft);
 }
 
 
