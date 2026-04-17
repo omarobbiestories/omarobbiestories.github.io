@@ -125,6 +125,22 @@ hr {
   margin: 0 0 28px;
 }
 
+.page-author {
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: 1.05rem;
+  margin: -10px 0 22px;
+}
+
+.intro {
+  max-width: 760px;
+  margin: 0 auto 28px;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 1.12rem;
+}
+
+
 .section-title {
   color: var(--text-heading);
   font-size: 1.9rem;
@@ -304,6 +320,10 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
+}
+
+.story-cta {
+  display: inline-block;
 }
 
 .story-card {
