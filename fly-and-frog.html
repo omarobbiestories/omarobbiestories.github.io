@@ -358,9 +358,9 @@ a:hover {
     display: block;
   }
 
-  .storybook:has(.book-page:target) .book-page.default-page {
-    display: none;
-  }
+  .storybook:has(.book-page:target:not(.default-page)) .book-page.default-page {
+  display: none;
+}
 
   .spread-nav {
     display: flex;
