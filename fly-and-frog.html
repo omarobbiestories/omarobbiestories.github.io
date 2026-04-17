@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
 <style>
 
-/* --------------------------------------------------
+/* ========================================
    1. PAGE FOUNDATION
--------------------------------------------------- */
+======================================== */
 
 body {
   font-family: Georgia, serif;
@@ -27,9 +28,9 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
-   2. TOP NAVIGATION / PAGE HEADINGS
--------------------------------------------------- */
+/* ========================================
+   2. TOP LINK + PAGE HEADER
+======================================== */
 
 .nav-link {
   display: inline-block;
@@ -75,9 +76,9 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
-   3. STORYBOOK OUTER SHELL
--------------------------------------------------- */
+/* ========================================
+   3. STORYBOOK SHELL
+======================================== */
 
 .book-shell {
   max-width: 1040px;
@@ -85,11 +86,10 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
+/* ========================================
    4. SWIPEABLE STORYBOOK
-   - natural finger swipe
-   - each page snaps like a book
--------------------------------------------------- */
+   Natural finger swipe + page snap
+======================================== */
 
 .storybook {
   display: flex;
@@ -97,7 +97,6 @@ a:hover {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  gap: 0;
   border-radius: 18px;
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
   border: 1px solid #e5ded1;
@@ -114,9 +113,9 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
-   5. EACH BOOK PAGE
--------------------------------------------------- */
+/* ========================================
+   5. EACH PAGE
+======================================== */
 
 .book-page {
   flex: 0 0 100%;
@@ -130,10 +129,9 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
+/* ========================================
    6. FRONT COVER / BACK COVER
-   - includes space for image
--------------------------------------------------- */
+======================================== */
 
 .cover-page {
   display: flex;
@@ -143,22 +141,22 @@ a:hover {
   background: #fcfaf4;
 }
 
-.cover-page h1 {
+.cover-title {
   font-size: 2.5rem;
   line-height: 1.2;
   color: #5f7d65;
   margin-bottom: 12px;
 }
 
-.cover-page .subtitle {
+.cover-subtitle {
   font-size: 1.2rem;
   color: #7a6a5f;
   margin-bottom: 18px;
 }
 
-.cover-page .cover-text {
+.cover-text {
   max-width: 620px;
-  margin: 0 auto;
+  margin: 14px auto 0 auto;
   color: #5a4a42;
   line-height: 1.8;
 }
@@ -182,10 +180,17 @@ a:hover {
   background: #f7f3eb;
 }
 
+.swipe-hint {
+  text-align: center;
+  color: #8a9485;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
 
-/* --------------------------------------------------
-   7. INSIDE STORY PAGES
--------------------------------------------------- */
+
+/* ========================================
+   7. STORY PAGE LAYOUT
+======================================== */
 
 .book {
   display: grid;
@@ -219,6 +224,19 @@ a:hover {
   background: #fcfaf4;
   padding-left: 18px;
 }
+
+.spread-label {
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #97a18f;
+  margin-bottom: 18px;
+}
+
+
+/* ========================================
+   8. IMAGE CARDS
+======================================== */
 
 .image-pair {
   display: grid;
@@ -255,44 +273,28 @@ a:hover {
   line-height: 1.65;
 }
 
-.spread-label {
-  font-size: 0.95rem;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  color: #97a18f;
-  margin-bottom: 18px;
-}
 
-
-/* --------------------------------------------------
-   8. PAGE NUMBERS
--------------------------------------------------- */
+/* ========================================
+   9. PAGE NUMBER
+======================================== */
 
 .page-number {
   position: absolute;
   bottom: 14px;
+  right: 30px;
   font-size: 0.95rem;
   color: #9aa393;
 }
 
-.page-number.left {
-  left: 30px;
-}
 
-.page-number.right {
-  right: 30px;
-}
-
-
-/* --------------------------------------------------
-   9. PAGE TURN LINKS
-   - use as links, not buttons
--------------------------------------------------- */
+/* ========================================
+   10. PAGE LINKS UNDER BOOK
+======================================== */
 
 .book-controls {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-top: 22px;
   flex-wrap: wrap;
 }
@@ -303,8 +305,8 @@ a:hover {
   color: #5f7d65;
   border: 1px solid #d6e2d3;
   border-radius: 999px;
-  padding: 12px 22px;
-  font-size: 1.02rem;
+  padding: 12px 20px;
+  font-size: 1rem;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -323,21 +325,9 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
-   10. OPTIONAL SWIPE HINT
--------------------------------------------------- */
-
-.swipe-hint {
-  text-align: center;
-  color: #8a9485;
-  font-size: 0.95rem;
-  margin: 10px 0 0 0;
-}
-
-
-/* --------------------------------------------------
+/* ========================================
    11. TABLET
--------------------------------------------------- */
+======================================== */
 
 @media (max-width: 900px) {
   body {
@@ -383,12 +373,10 @@ a:hover {
 }
 
 
-/* --------------------------------------------------
+/* ========================================
    12. MOBILE
-   - reduced padding
-   - larger usable text area
-   - less empty border space
--------------------------------------------------- */
+   Reduced padding so text has more room
+======================================== */
 
 @media (max-width: 560px) {
   body {
@@ -421,11 +409,11 @@ a:hover {
     padding: 16px 12px 38px 12px;
   }
 
-  .cover-page h1 {
+  .cover-title {
     font-size: 2rem;
   }
 
-  .cover-page .subtitle {
+  .cover-subtitle {
     font-size: 1.05rem;
   }
 
@@ -453,16 +441,9 @@ a:hover {
   }
 
   .page-number {
-    font-size: 0.84rem;
-    bottom: 10px;
-  }
-
-  .page-number.left {
-    left: 14px;
-  }
-
-  .page-number.right {
     right: 14px;
+    bottom: 10px;
+    font-size: 0.84rem;
   }
 
   .book-controls {
@@ -480,217 +461,238 @@ a:hover {
 }
 
 </style>
-
 <body>
 
+  <!-- ========================================
+       1. BACK LINK
+  ========================================= -->
   <a href="children.html" class="nav-link">← Back to Children’s Stories</a>
 
+  <!-- ========================================
+       2. STORY HEADER
+  ========================================= -->
   <h1 class="page-title">A Fly and a Frog</h1>
   <p class="page-subtitle">Oma Robbie Storytime Series</p>
   <p class="page-author">By Robin K</p>
 
+  <!-- ========================================
+       3. NOTICE BOX
+  ========================================= -->
   <div class="notice-box">
     More illustrations and a small poem video will be added soon.
   </div>
 
+  <!-- ========================================
+       4. STORYBOOK SHELL
+  ========================================= -->
   <div class="book-shell">
 
-    <!-- SPREAD 1 -->
+    <!-- ========================================
+         5. SWIPEABLE STORYBOOK
+         Each section below is one page
+    ========================================= -->
+    <div class="storybook">
 
-     <!-- FRONT COVER -->
-  <section class="page cover">
-    <h1>A Fly and a Frog</h1>
-    <p class="subtitle">A gentle tale by Robin K</p>
-  </section>
-    
-<div class="spread active">
-  <div class="book">
-    <div class="page text-page">
-      <div class="spread-label">Story Page</div>
-      <p>
-        I heard a fly scream, its small voice so shrill,<br>
-        As it buzzed by a stream at the foot of a hill.<br>
-        “Save me, dear Robbie, from that frog’s greedy stare,<br>
-        He wants to eat me—it’s more than I can bear!”
-      </p>
-      <div class="page-number left">1</div>
-    </div>
+      <!-- ========================================
+           5A. FRONT COVER
+      ========================================= -->
+      <section class="book-page cover-page" id="cover">
+        <h2 class="cover-title">A Fly and a Frog</h2>
+        <p class="cover-subtitle">A gentle tale by Robin K</p>
 
-    <div class="page image-page">
-      <div class="spread-label">Picture Page</div>
-
-      <div class="image-pair">
-        <div class="image-card">
-          <img src="images/children/fly-frog-1.jpg" alt="The little fly senses danger as the frog makes his move—oh no!">
+        <div class="cover-image-space">
+          <img src="images/children/fly-frog-cover.jpg" alt="Front cover image for A Fly and a Frog">
         </div>
 
-        <div class="image-card">
-          <img src="images/children/fly-frog-1a.jpg" alt="The startled little fly escapes as the greedy frog leaps to and fro.">
-        </div>
-      </div>
+        <p class="cover-text">
+          A gentle story by the stream, with one little fly and one very greedy frog.
+        </p>
 
-      <p class="image-caption">
-        The little fly senses danger as Froggie watches, eyes aglow.
-      </p>
-      <div class="page-number right">2</div>
-    </div>
-  </div>
-</div>
+        <p class="swipe-hint">Swipe to turn the page →</p>
+      </section>
 
-   <!-- SPREAD 2 -->
-<div class="spread">
-  <div class="book">
-    <div class="page text-page">
-      <div class="spread-label">Story Page</div>
-      <p>
-        “Quick, little fly, buzz up to that tree,”<br>
-        I said, “Hide by the bank where no one can see.”<br>
-       Stay silent and still—don’t flutter a wing,<br>
-        Be brave, and that frog won’t see a thing.”
-      </p>
-      <div class="page-number left">3</div>
-    </div>
+      <!-- ========================================
+           5B. PAGE 1
+      ========================================= -->
+      <section class="book-page story-page" id="page1">
+        <div class="book">
+          <div class="text-page">
+            <div class="spread-label">Story Page</div>
+            <p>
+              I heard a fly scream, its small voice so shrill,<br>
+              As it buzzed by a stream at the foot of a hill.<br>
+              “Save me, dear Robbie, from that frog’s greedy stare,<br>
+              He wants to eat me—it’s more than I can bear!”
+            </p>
+          </div>
 
-    <div class="page image-page">
-      <div class="spread-label">Picture Page</div>
+          <div class="image-page">
+            <div class="spread-label">Picture Page</div>
 
-      <div class="image-pair">
-        <div class="image-card">
-          <img src="images/children/fly-frog-2.jpg" alt="The little fly hides in the tree above the bank, safe as can be.">
-        </div>
+            <div class="image-pair">
+              <div class="image-card">
+                <img src="images/children/fly-frog-1.jpg" alt="The little fly senses danger as the frog makes his move">
+              </div>
 
-        <div class="image-card">
-          <img src="images/children/fly-frog-2a.jpg" alt="The little fly is safe, but trembling, you see.">
-        </div>
-      </div>
+              <div class="image-card">
+                <img src="images/children/fly-frog-1a.jpg" alt="The startled little fly escapes as the greedy frog leaps">
+              </div>
+            </div>
 
-      <p class="image-caption">
-        he little fly hides high in the tree, scared and still as can be.
-      </p>
-      <div class="page-number right">4</div>
-    </div>
-  </div>
-</div>
-
-   <!-- SPREAD 3 -->
-<div class="spread">
-  <div class="book">
-    <div class="page text-page">
-      <div class="spread-label">Story Page</div>
-      <p>
-        The hungry frog’s eyes bulged as he looked all around,<br>
-        The little fly stayed still, not making a sound.<br>
-        No snack for that froggie who lurked by the stream,<br>
-        That brave little fly outsmarted his scheme.
-      </p>
-      <div class="page-number left">5</div>
-    </div>
-
-    <div class="page image-page">
-      <div class="spread-label">Picture Page</div>
-
-      <div class="image-pair">
-        <div class="image-card">
-          <img src="images/children/fly-frog-search.jpg" alt="The frog searching while the little fly remains hidden">
+            <p class="image-caption">
+              The little fly senses danger as Froggie watches, eyes aglow.
+            </p>
+          </div>
         </div>
 
-        <div class="image-card">
-          <img src="images/children/frog-search-close.jpg" alt="A closer view of the frog searching in confusion">
+        <div class="page-number right">1</div>
+      </section>
+
+      <!-- ========================================
+           5C. PAGE 2
+      ========================================= -->
+      <section class="book-page story-page" id="page2">
+        <div class="book">
+          <div class="text-page">
+            <div class="spread-label">Story Page</div>
+            <p>
+              “Quick, little fly, buzz up to that tree,”<br>
+              I said, “Hide by the bank where no one can see.”<br>
+              Stay silent and still—don’t flutter a wing,<br>
+              Be brave, and that frog won’t see a thing.”
+            </p>
+          </div>
+
+          <div class="image-page">
+            <div class="spread-label">Picture Page</div>
+
+            <div class="image-pair">
+              <div class="image-card">
+                <img src="images/children/fly-frog-2.jpg" alt="The little fly hides in the tree above the bank">
+              </div>
+
+              <div class="image-card">
+                <img src="images/children/fly-frog-2a.jpg" alt="The little fly is safe but trembling">
+              </div>
+            </div>
+
+            <p class="image-caption">
+              The little fly hides high in the tree, scared and still as can be.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <p class="image-caption">
-        Froggie searches and searches, but the clever little fly stays hidden from sight.
-      </p>
-      <div class="page-number right">6</div>
-    </div>
-  </div>
-</div>
+        <div class="page-number right">2</div>
+      </section>
 
-    <!-- SPREAD 4 -->
-<div class="spread">
-  <div class="book">
-    <div class="page text-page">
-      <div class="spread-label">Story Page</div>
-      <p>
-        Then a big red-eyed blowfly flew past Froggie so fast,<br>
-        That goggly-eyed frog snapped it up—gone in a flash!.<br>
-        Our little fly buzzed as he zoomed all around,<br>
-        Safe by the stream—with a cheeky buzzzz sound!
-      </p>
-      <div class="page-number left">7</div>
-    </div>
+      <!-- ========================================
+           5D. PAGE 3
+      ========================================= -->
+      <section class="book-page story-page" id="page3">
+        <div class="book">
+          <div class="text-page">
+            <div class="spread-label">Story Page</div>
+            <p>
+              The hungry frog’s eyes bulged as he looked all around,<br>
+              The little fly stayed still, not making a sound.<br>
+              No snack for that froggie who lurked by the stream,<br>
+              That brave little fly outsmarted his scheme.
+            </p>
+          </div>
 
-    <div class="page image-page">
-      <div class="spread-label">Picture Page</div>
+          <div class="image-page">
+            <div class="spread-label">Picture Page</div>
 
-      <div class="image-pair">
-        <div class="image-card">
-          <img src="images/children/fly-frog-safe.jpg" alt="The little fly safe at last near the stream">
+            <div class="image-pair">
+              <div class="image-card">
+                <img src="images/children/fly-frog-search.jpg" alt="The frog searching while the little fly remains hidden">
+              </div>
+
+              <div class="image-card">
+                <img src="images/children/frog-search-close.jpg" alt="A closer view of the frog searching in confusion">
+              </div>
+            </div>
+
+            <p class="image-caption">
+              Froggie searches and searches, but the clever little fly stays hidden from sight.
+            </p>
+          </div>
         </div>
 
-        <div class="image-card">
-          <img src="images/children/fly-cheeky-close.jpg" alt="A closer view of the little fly buzzing cheekily while the frog is distracted">
+        <div class="page-number right">3</div>
+      </section>
+
+      <!-- ========================================
+           5E. PAGE 4
+      ========================================= -->
+      <section class="book-page story-page" id="page4">
+        <div class="book">
+          <div class="text-page">
+            <div class="spread-label">Story Page</div>
+            <p>
+              Then a big red-eyed blowfly flew past Froggie so fast,<br>
+              That goggly-eyed frog snapped it up—gone in a flash!<br>
+              Our little fly buzzed as he zoomed all around,<br>
+              Safe by the stream—with a cheeky buzzzz sound!
+            </p>
+          </div>
+
+          <div class="image-page">
+            <div class="spread-label">Picture Page</div>
+
+            <div class="image-pair">
+              <div class="image-card">
+                <img src="images/children/fly-frog-safe.jpg" alt="The little fly safe at last near the stream">
+              </div>
+
+              <div class="image-card">
+                <img src="images/children/fly-cheeky-close.jpg" alt="A closer view of the little fly buzzing cheekily while the frog is distracted">
+              </div>
+            </div>
+
+            <p class="image-caption">
+              Safe at last, the little fly gives a cheeky buzz while Froggie misses his chance.
+            </p>
+          </div>
         </div>
-     
 
-      <p class="image-caption">
-        Safe at last, the little fly gives a cheeky buzz while Froggie misses his chance.
-      </p>
-      <div class="page-number right">8</div>
+        <div class="page-number right">4</div>
+      </section>
+
+      <!-- ========================================
+           5F. BACK COVER
+      ========================================= -->
+      <section class="book-page cover-page" id="back-cover">
+        <h2 class="cover-title">The End</h2>
+
+        <div class="cover-image-space">
+          <img src="images/children/fly-frog-back.jpg" alt="Back cover image for A Fly and a Frog">
+        </div>
+
+        <p class="cover-text">The little fly is safe… for now.</p>
+        <p class="cover-text">Oma Robbie Stories</p>
+      </section>
+
     </div>
->
-  
-   <!-- BACK COVER -->
-  <section class="page cover">
-    <div class="page image-page">
-    <p>The little fly is safe… for now.</p>
-    <p class="author">Oma Robbie Stories</p>
-  </section>
-  </div>
- </div
-</div>
 
+    <!-- ========================================
+         6. PAGE LINKS
+         Taps nicely on mobile as well as swipe
+    ========================================= -->
     <div class="book-controls">
-      <button id="prevBtn" disabled>← Previous Spread</button>
-      <button id="nextBtn">Next Spread →</button>
+      <a class="page-link" href="#cover">Front Cover</a>
+      <a class="page-link" href="#page1">Page 1</a>
+      <a class="page-link" href="#page2">Page 2</a>
+      <a class="page-link" href="#page3">Page 3</a>
+      <a class="page-link" href="#page4">Page 4</a>
+      <a class="page-link" href="#back-cover">Back Cover</a>
     </div>
 
-    <div class="spread-counter" id="spreadCounter">Spread 1 of 4</div>
+    <div class="spread-counter">
+      Swipe across the pages or tap a page link below.
+    </div>
+
   </div>
-
-  <script>
-    const spreads = document.querySelectorAll('.spread');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const spreadCounter = document.getElementById('spreadCounter');
-
-    let currentSpread = 0;
-
-    function showSpread(index) {
-      spreads.forEach((spread, i) => {
-        spread.classList.toggle('active', i === index);
-      });
-
-      prevBtn.disabled = index === 0;
-      nextBtn.disabled = index === spreads.length - 1;
-      spreadCounter.textContent = `Spread ${index + 1} of ${spreads.length}`;
-    }
-
-    prevBtn.addEventListener('click', () => {
-      if (currentSpread > 0) {
-        currentSpread--;
-        showSpread(currentSpread);
-      }
-    });
-
-    nextBtn.addEventListener('click', () => {
-      if (currentSpread < spreads.length - 1) {
-        currentSpread++;
-        showSpread(currentSpread);
-      }
-    });
-  </script>
 
 </body>
 </html>
