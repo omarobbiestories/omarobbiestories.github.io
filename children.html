@@ -19,6 +19,7 @@ body {
   margin: 40px auto;
   padding: 0 20px;
   line-height: 1.85;
+  font-size: 1.05rem;
 }
 
 a {
@@ -37,9 +38,10 @@ a:hover {
 ======================================== */
 
 .nav-link {
-  display: block;
+  display: inline-block;
   margin-bottom: 25px;
   color: #7b8f7d;
+  font-size: 1rem;
 }
 
 
@@ -52,11 +54,13 @@ a:hover {
   color: #5f7d65;
   font-size: 2.5rem;
   margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .page-subtitle {
   text-align: center;
   color: #7b8f7d;
+  font-size: 1.15rem;
   margin-bottom: 8px;
 }
 
@@ -64,7 +68,7 @@ a:hover {
   text-align: center;
   color: #7b8f7d;
   margin-bottom: 40px;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 
@@ -77,6 +81,7 @@ a:hover {
   max-width: 620px;
   margin: 0 auto 50px auto;
   color: #6f8f72;
+  font-size: 1.05rem;
 }
 
 .notice-box {
@@ -123,24 +128,29 @@ a:hover {
 
 .story-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 .story-card img {
+  display: block;
   width: 100%;
   height: auto;
   max-height: 220px;
   object-fit: contain;
+  margin: 0 auto 12px auto;
 }
 
 .story-card h3 {
   color: #5f7d65;
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
 }
 
 .story-card p {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: #4a4f46;
+  line-height: 1.7;
+  margin: 0;
 }
 
 
@@ -154,10 +164,9 @@ a:hover {
 
 .arrow {
   display: inline-block;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* Trigger animation when hovering the whole card */
 .story-grid a:hover .arrow {
   transform: translateX(6px);
   opacity: 0.85;
@@ -165,7 +174,51 @@ a:hover {
 
 
 /* ========================================
-   8. MOBILE
+   8. GENERAL CONTENT SECTIONS
+   Use on Mandela / story pages too
+======================================== */
+
+.section-heading {
+  color: #5f7d65;
+  font-size: 1.7rem;
+  margin-top: 42px;
+  margin-bottom: 14px;
+}
+
+.sub-heading {
+  color: #6f8f72;
+  font-size: 1.25rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.text-section p,
+.text-section li {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.text-section {
+  margin-bottom: 32px;
+}
+
+
+/* ========================================
+   9. IMAGES INSIDE TEXT PAGES
+======================================== */
+
+.feature-image,
+.inline-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 18px auto 24px auto;
+}
+
+
+/* ========================================
+   10. MOBILE
 ======================================== */
 
 @media (max-width: 600px) {
@@ -178,27 +231,27 @@ a:hover {
 
   .nav-link {
     margin-bottom: 18px;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 
   .page-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 6px;
   }
 
   .page-subtitle {
-    font-size: 1rem;
+    font-size: 1.08rem;
     margin-bottom: 6px;
   }
 
   .page-author {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 24px;
   }
 
   .intro {
     margin: 0 auto 30px auto;
-    font-size: 1rem;
+    font-size: 1.02rem;
     line-height: 1.7;
   }
 
@@ -206,7 +259,7 @@ a:hover {
     padding: 12px 14px;
     margin: 0 auto 28px auto;
     border-radius: 12px;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 
   .story-grid {
@@ -221,17 +274,35 @@ a:hover {
   }
 
   .story-card img {
-    height: 180px;
+    max-height: 180px;
   }
 
   .story-card h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     margin-bottom: 6px;
   }
 
   .story-card p {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     line-height: 1.65;
+  }
+
+  .section-heading {
+    font-size: 1.45rem;
+    margin-top: 34px;
+    margin-bottom: 12px;
+  }
+
+  .sub-heading {
+    font-size: 1.15rem;
+    margin-top: 22px;
+    margin-bottom: 8px;
+  }
+
+  .text-section p,
+  .text-section li {
+    font-size: 1rem;
+    line-height: 1.75;
   }
 }
 
@@ -260,12 +331,14 @@ a:hover {
       <div class="story-card">
         <img src="images/children/fly-frog.jpg" alt="A Fly and a Frog">
         <h3>A Fly and a Frog</h3>
-<p>
-  <span class="story-cta">
-    A playful tale of quick thinking, danger, and a very clever escape 
-    <span class="arrow">→</span>
-  </span>
-</p>
+        <p>
+          <span class="story-cta">
+            A playful tale of quick thinking, danger, and a very clever escape
+            <span class="arrow">→</span>
+          </span>
+        </p>
+      </div>
+    </a>
 
     <div class="story-card">
       <img src="images/story-coming-soon.jpg" alt="Coming soon">
