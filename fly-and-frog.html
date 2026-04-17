@@ -318,13 +318,14 @@ a:hover {
 }
 
 .spread-counter {
+  display: none;
   text-align: center;
   margin-top: 14px;
   color: #7b8f7d;
   font-size: 1rem;
 }
    
-/* ========================================
+  /* ========================================
    DESKTOP ONLY
    Show one page at a time like a book
 ======================================== */
@@ -387,7 +388,8 @@ a:hover {
   }
 
   .book-controls,
-  .spread-counter {
+  .spread-counter,
+  .swipe-hint {
     display: none;
   }
 }
@@ -437,12 +439,20 @@ a:hover {
   .image-card img {
     max-height: none;
   }
+   
+   .swipe-hint {
+  display: block;
+  text-align: center;
+  color: #8a9485;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+   
 }
 
 
 /* ========================================
    12. MOBILE
-   Reduced padding so text has more room
 ======================================== */
 
 @media (max-width: 560px) {
@@ -753,30 +763,13 @@ a:hover {
 
         <p class="cover-text">The little fly is safe… for now.</p>
         <p class="cover-text">Oma Robbie Stories</p>
+
+        <div class="spread-nav">
+          <a href="#page4">← Previous Spread</a>
+        </div>
       </section>
-<div class="spread-nav">
-  <a href="#page4">← Previous Spread</a>
-  <a href="#cover">Front Cover</a>
-</div>
-    </div>
 
-    <!-- ========================================
-         6. PAGE LINKS
-         Taps nicely on mobile as well as swipe
-    ========================================= -->
-    <div class="book-controls">
-      <a class="page-link" href="#cover">Front Cover</a>
-      <a class="page-link" href="#page1">Page 1</a>
-      <a class="page-link" href="#page2">Page 2</a>
-      <a class="page-link" href="#page3">Page 3</a>
-      <a class="page-link" href="#page4">Page 4</a>
-      <a class="page-link" href="#back-cover">Back Cover</a>
     </div>
-
-    <div class="spread-counter">
-      Swipe across the pages or tap a page link below.
-    </div>
-
   </div>
 
 </body>
