@@ -279,13 +279,18 @@ hr {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block; /* IMPORTANT */
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
 }
+
 
 .card img {
   width: 100%;
