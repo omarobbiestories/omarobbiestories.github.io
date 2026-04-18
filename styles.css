@@ -707,6 +707,24 @@ hr {
   }
 }
 
+/* =========================================================
+   COMING SOON CARD (POETRY)
+========================================================= */
+
+.coming-soon-card {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.coming-soon-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.coming-soon-card img {
+  filter: grayscale(20%);
+}
+
 
 /* =========================================================
    9. GENERIC IMAGE GALLERIES
