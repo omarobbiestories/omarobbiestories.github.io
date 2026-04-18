@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poetry | Oma Robbie Stories</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <a href="index.html" class="nav-link">← Back to Home</a>
+
+  <h1 class="page-title">Flashes of Blue</h1>
+  <p class="page-subtitle">Poetry and Prose</p>
+  <p class="page-author">By Robin K</p>
+
+  <p class="intro">
+    Robin’s reflections on humanity, life, and spirit —
+    poetry and prose shaped by a lifetime of observation.
+  </p>
+
+  <div class="notice-box">
+    This webpage is still growing — more poetry pages and images will appear soon.
+  </div>
+
+  <div class="story-grid">
+
+    <a href="releasing.html" class="story-card">
+      <img src="images/releasing.jpg" alt="Releasing poetry collection" />
+      <div class="story-card-content">
+        <h3>Releasing</h3>
+        <p>
+          Letting go of codependency, addiction, and the past — and moving forward without regret.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+    <a href="war.html" class="story-card">
+      <img src="images/war.jpg" alt="War poetry collection" />
+      <div class="story-card-content">
+        <h3>War</h3>
+        <p>
+          Reflections on conflict, loss, human suffering, and the cost carried across generations.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+    <a href="love.html" class="story-card">
+      <img src="images/love.jpg" alt="Love poetry collection" />
+      <div class="story-card-content">
+        <h3>Love</h3>
+        <p>
+          Poems on tenderness, heartbreak, devotion, longing, and the many forms love can take.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+    <a href="life.html" class="story-card">
+      <img src="images/life.jpg" alt="Life poetry collection" />
+      <div class="story-card-content">
+        <h3>Life</h3>
+        <p>
+          Observations on everyday existence, memory, change, growth, and the passing of time.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+    <a href="environment.html" class="story-card">
+      <img src="images/environment.jpg" alt="Environment poetry collection" />
+      <div class="story-card-content">
+        <h3>Environment</h3>
+        <p>
+          Writing shaped by the natural world, fragility, beauty, and our responsibility toward the earth.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+    <a href="unity.html" class="story-card">
+      <img src="images/unity.jpg" alt="Unity poetry collection" />
+      <div class="story-card-content">
+        <h3>Unity</h3>
+        <p>
+          Poems exploring connection, shared humanity, peace, and the hope of coming together.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+    <a href="spiritual.html" class="story-card">
+      <img src="images/spiritual.jpg" alt="Spiritual poetry collection" />
+      <div class="story-card-content">
+        <h3>Spiritual</h3>
+        <p>
+          Quiet reflections on faith, mystery, inner knowing, and the deeper search for meaning.
+        </p>
+        <p class="story-cta">Open this collection <span class="arrow">→</span></p>
+      </div>
+    </a>
+
+  </div>
+
+</body>
+</html>
