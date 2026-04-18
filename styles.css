@@ -3,6 +3,7 @@
    Unified stylesheet for:
    - index.html
    - children.html
+   - poetry.html
    - Fly and Frog story pages
    - mandela.html
    - article / archive-style pages
@@ -149,7 +150,7 @@ hr {
 
 .section-heading {
   text-align: center;
-  color: #5f7d65;
+  color: var(--text-heading);
   font-size: 1.9rem;
   margin: 50px 0 25px;
 }
@@ -261,7 +262,7 @@ hr {
 
 
 /* =========================================================
-   5. CARD / GRID LAYOUTS
+   5. CARD / GRID LAYOUTS (HOMEPAGE)
 ========================================================= */
 .container {
   margin-top: 28px;
@@ -274,31 +275,30 @@ hr {
 }
 
 .card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border-muted);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: block; /* IMPORTANT */
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+  box-shadow: var(--shadow-hover);
 }
-
 
 .card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  display: block;
 }
 
-.card-content,
 .card > h3,
 .card > p {
   padding-left: 18px;
@@ -315,40 +315,9 @@ hr {
   margin-bottom: 14px;
 }
 
-.card a {
-  font-weight: bold;
-}
-
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.card-link:hover {
-  text-decoration: none;
-}
-
-.card-cta {
-  display: inline-block;
-}
-
-.arrow {
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-.card-link:hover .arrow {
-  transform: translateX(6px);
-}
-
-.card-link:hover .card-cta {
-  transform: translateY(-1px);
-}
-
 
 /* =========================================================
-   6. CHILDREN'S STORIES PAGE
+   6. STORY / POETRY CARD GRID
 ========================================================= */
 .story-intro {
   text-align: center;
@@ -361,19 +330,19 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
-}
-
-.story-cta {
-  display: inline-block;
+  margin-top: 35px;
 }
 
 .story-card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border-muted);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .story-card:hover {
@@ -383,10 +352,9 @@ hr {
 
 .story-card img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  border-radius: 10px 10px 0 0;
 }
 
 .story-card-content {
@@ -396,12 +364,26 @@ hr {
 .story-card h3 {
   margin: 0 0 10px;
   color: var(--text-heading);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
+  line-height: 1.3;
 }
 
 .story-card p {
-  color: var(--text-main);
   margin-bottom: 12px;
+  color: var(--text-main);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.story-cta {
+  display: inline-block;
+  color: var(--link);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.arrow {
+  margin-left: 4px;
 }
 
 
@@ -677,95 +659,6 @@ hr {
   width: 100%;
   border-radius: var(--radius-md);
   object-fit: contain;
-}
-/* ========================================
-   POETRY PAGE / CARD GRID
-   Based on Children’s Stories foundation
-======================================== */
-
-.story-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  margin-top: 35px;
-}
-
-.story-card {
-  display: block;
-  background: #fbfcf8;
-  border: 1px solid #d8e0d2;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-  color: inherit;
-}
-
-.story-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
-}
-
-.story-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.story-card-content {
-  padding: 18px 18px 20px;
-}
-
-.story-card h3 {
-  margin: 0 0 10px;
-  color: #5f7d65;
-  font-size: 1.35rem;
-  line-height: 1.3;
-}
-
-.story-card p {
-  margin: 0 0 12px;
-  color: #4a4f46;
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-.story-cta {
-  display: inline-block;
-  color: #6f8f72;
-  font-weight: 600;
-  margin-top: 6px;
-}
-
-.arrow {
-  margin-left: 4px;
-}
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 768px) {
-  .story-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .story-card-content {
-    padding: 16px;
-  }
-
-  .story-card h3 {
-    font-size: 1.25rem;
-  }
-
-  .story-card p {
-    font-size: 1rem;
-    line-height: 1.65;
-  }
 }
 
 
