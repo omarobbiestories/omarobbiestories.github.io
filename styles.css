@@ -1061,4 +1061,14 @@ hr {
   margin-top: 10px;
   font-style: italic;
 }
+
+   /* =========================================================
+   CHECK / VERIFY HIGHLIGHT
+========================================================= */
+
+.check {
+  background: #fff3cd;
+  border-bottom: 2px dashed #e0a800;
+  padding: 0 2px;
+}
 }
