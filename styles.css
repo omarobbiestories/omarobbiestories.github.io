@@ -934,4 +934,86 @@ hr {
   .intro-section {
     padding: 16px;
   }
+
+   /* =========================================================
+   14. AUTOBIOGRAPHY / LONG-FORM READING
+========================================================= */
+
+.autobio-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.autobio-page p {
+  text-align: justify;
+  max-width: 660px;
+  margin: 0 auto 1.4em;
+}
+
+.chapter-heading {
+  text-align: center;
+  color: var(--text-heading);
+  font-size: 2.1rem;
+  margin: 3rem 0 1.5rem;
+}
+
+.chapter-subheading {
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.story-block {
+  margin-bottom: 2rem;
+}
+
+.story-block p {
+  margin-bottom: 1.3em;
+}
+
+/* =========================================================
+   TABLE OF CONTENTS (CLICKABLE NAV)
+========================================================= */
+
+.toc {
+  max-width: 660px;
+  margin: 2rem auto 3rem;
+  padding: 20px 22px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+}
+
+.toc h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SECTION ANCHOR OFFSET (fix for sticky headers)
+========================================================= */
+
+.section-anchor {
+  scroll-margin-top: 80px;
+}
 }
