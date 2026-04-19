@@ -1016,4 +1016,49 @@ hr {
 .section-anchor {
   scroll-margin-top: 80px;
 }
+
+   /* =========================================================
+   15. AUTOBIOGRAPHY TITLE PAGE
+========================================================= */
+
+.title-page {
+  text-align: center;
+  padding: 60px 20px 50px;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.book-title {
+  font-family: Georgia, serif;
+  font-size: 2.9rem;
+  color: var(--text-heading);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.book-subtitle {
+  font-size: 1.35rem;
+  color: var(--text-subtle);
+  margin-bottom: 24px;
+}
+
+.book-author {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.title-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--border-soft);
+  margin: 20px auto;
+}
+
+.book-credit {
+  font-size: 0.98rem;
+  color: var(--text-soft);
+  margin-top: 10px;
+  font-style: italic;
+}
 }
