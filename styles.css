@@ -934,8 +934,10 @@ hr {
   .intro-section {
     padding: 16px;
   }
+}
 
-   /* =========================================================
+
+/* =========================================================
    14. AUTOBIOGRAPHY / LONG-FORM READING
 ========================================================= */
 
@@ -955,6 +957,7 @@ hr {
   color: var(--text-heading);
   font-size: 2.1rem;
   margin: 3rem 0 1.5rem;
+  scroll-margin-top: 90px;
 }
 
 .chapter-subheading {
@@ -962,6 +965,7 @@ hr {
   color: var(--text-subtle);
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  scroll-margin-top: 90px;
 }
 
 .story-block {
@@ -971,6 +975,7 @@ hr {
 .story-block p {
   margin-bottom: 1.3em;
 }
+
 
 /* =========================================================
    TABLE OF CONTENTS (CLICKABLE NAV)
@@ -1007,17 +1012,11 @@ hr {
 
 .toc a:hover {
   text-decoration: underline;
+  opacity: 0.75;
 }
+
 
 /* =========================================================
-   SECTION ANCHOR OFFSET (fix for sticky headers)
-========================================================= */
-
-.section-anchor {
-  scroll-margin-top: 80px;
-}
-
-   /* =========================================================
    15. AUTOBIOGRAPHY TITLE PAGE
 ========================================================= */
 
@@ -1062,7 +1061,8 @@ hr {
   font-style: italic;
 }
 
-   /* =========================================================
+
+/* =========================================================
    CHECK / VERIFY HIGHLIGHT
 ========================================================= */
 
@@ -1070,5 +1070,4 @@ hr {
   background: #fff3cd;
   border-bottom: 2px dashed #e0a800;
   padding: 0 2px;
-}
 }
