@@ -666,31 +666,48 @@ hr {
 ========================================================= */
 
 .poetry-collection {
-  margin-top: 2rem;
+  max-width: 820px;
+  margin: 2.5rem auto 0;
 }
 
 .poem-entry {
-  margin: 0 0 4rem;
-  padding-bottom: 2.2rem;
+  margin: 0 0 5rem;
+  padding-bottom: 4rem;
   border-bottom: 1px solid rgba(90, 110, 90, 0.15);
+}
+
+.poem-entry:last-of-type {
+  border-bottom: none;
 }
 
 .poem-entry h2 {
   font-size: 1.8rem;
   color: #5f7d65;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
 .poem-text {
-  max-width: 760px;
-  margin: 0 auto 1.6rem;
-  text-align: left;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  text-align: center;
 }
 
 .poem-text p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.35rem;
   line-height: 1.95;
+}
+
+.single-image {
+  max-width: 720px;
+  margin: 2.2rem auto 0;
+}
+
+.single-image img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  box-shadow: var(--shadow-soft);
 }
 
 .reflection-entry {
@@ -706,7 +723,6 @@ hr {
     font-size: 1.05rem;
   }
 }
-
 /* =========================================================
    COMING SOON CARD (POETRY)
 ========================================================= */
