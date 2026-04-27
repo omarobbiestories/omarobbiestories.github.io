@@ -622,6 +622,28 @@ hr {
   font-style: normal;
 }
 
+.quote-section {
+  margin: 30px 0 50px;
+  text-align: center;
+}
+
+.signature-quote {
+  max-width: 640px;
+  margin: 0 auto;
+  font-style: italic;
+  color: var(--text-soft);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.signature-quote .quote-author {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--text-subtle);
+}
+
 .bible-reference {
   display: block;
   margin-top: 8px;
