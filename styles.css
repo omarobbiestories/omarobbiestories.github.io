@@ -736,8 +736,7 @@ hr {
 }
 
 .text-section {
-  margin-top: 34px;
-  margin-bottom: 42px;
+  margin: var(--space-lg) 0 var(--space-xl);
 }
 
 .back-link {
