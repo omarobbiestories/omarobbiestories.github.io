@@ -1091,45 +1091,6 @@ hr {
 
 
 /* =========================================================
-   TABLE OF CONTENTS (CLICKABLE NAV)
-========================================================= */
-
-.toc {
-  max-width: 660px;
-  margin: 2rem auto 3rem;
-  padding: 20px 22px;
-  background: var(--bg-soft);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-}
-
-.toc h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--text-heading);
-}
-
-.toc ul {
-  list-style: none;
-  padding: 0;
-}
-
-.toc li {
-  margin-bottom: 10px;
-}
-
-.toc a {
-  color: var(--link);
-  text-decoration: none;
-}
-
-.toc a:hover {
-  text-decoration: underline;
-  opacity: 0.75;
-}
-
-
-/* =========================================================
    15. AUTOBIOGRAPHY TITLE PAGE
 ========================================================= */
 
@@ -1172,6 +1133,64 @@ hr {
   color: var(--text-soft);
   margin-top: 10px;
   font-style: italic;
+}
+
+/* =========================================================
+   TABLE OF CONTENTS (CLICKABLE NAV)
+========================================================= */
+
+.toc {
+  max-width: 660px;
+  margin: 2rem auto 3rem;
+  padding: 20px 22px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+}
+
+.toc h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+.youtube-feature {
+  text-align: center;
+  margin: 2rem auto 3rem;
+}
+
+.youtube-feature a {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 1.05rem;
+  color: #5f7d65;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(95, 125, 101, 0.4);
+  transition: all 0.25s ease;
+}
+
+.youtube-feature a:hover {
+  color: #7f9a85;
+  border-bottom-color: #7f9a85;
 }
 
 
