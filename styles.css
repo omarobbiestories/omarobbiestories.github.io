@@ -175,6 +175,7 @@ hr {
 /* =========================================================
    4. INDEX / HOME PAGE
 ========================================================= */
+
 .notice-box {
   background: var(--bg-soft);
   border: 1px solid var(--border-soft);
@@ -186,25 +187,47 @@ hr {
   font-size: 1rem;
 }
 
-.hero {
-  text-align: center;
+/* HERO SECTION */
+
+.hero-section {
   position: relative;
+  text-align: center;
   padding: 80px 20px 70px;
   margin-bottom: 40px;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  background: url("images/poetry.jpg") center/cover no-repeat;
+}
 
-  background:
-    linear-gradient(rgba(246, 248, 243, 0.82), rgba(246, 248, 243, 0.96)),
-    url("images/poetry.jpg"); /* swap this later for your best artwork */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 250, 244, 0.6),
+    rgba(255, 250, 244, 0.5),
+    rgba(255, 250, 244, 0.6)
+  );
+  z-index: 1;
+}
 
-  background-size: cover;
-  background-position: center;
+.hero-section * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-inner {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.hero-section h1 {
+  color: var(--text-heading);
+  font-size: 3.3rem;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .hero-subtitle {
@@ -219,21 +242,8 @@ hr {
   max-width: 520px;
   margin: 0 auto;
 }
-   
-.hero h1 {
-  color: var(--text-heading);
-   font-size: 3.3rem;
-  line-height: 1.15;
-  margin-bottom: 10px;
-   letter-spacing: 0.5px;
-}
 
-.hero p {
-  color: var(--text-subtle);
-   font-size: 1.35rem;
-  max-width: 600px;
-  margin: 0 auto 24px;
-}
+/* ARTIST INTRO */
 
 .artist-intro {
   max-width: 900px;
@@ -256,16 +266,7 @@ hr {
   flex: 1;
 }
 
-@media (max-width: 700px) {
-  .artist-intro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .artist-portrait {
-    width: 180px;
-  }
-}
+/* INTRO SECTION */
 
 .intro-section {
   background: rgba(255, 255, 255, 0.55);
@@ -273,7 +274,6 @@ hr {
   border-radius: var(--radius-lg);
   padding: 28px 28px 24px;
   margin-bottom: 36px;
-
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(6px);
 }
@@ -298,17 +298,22 @@ hr {
   margin-top: 1.5rem;
 }
 
+/* ABOUT */
+
 .about {
-  background:  linear-gradient(rgba(246, 248, 243, 0.85), rgba(246, 248, 243, 0.95)),
- url("images/your-hero-image.jpg");
+  background:
+    linear-gradient(rgba(246, 248, 243, 0.85), rgba(246, 248, 243, 0.95)),
+    url("images/your-hero-image.jpg");
   border: 1px solid var(--border-muted);
   border-radius: var(--radius-lg);
-   background-size: cover;
+  background-size: cover;
   background-position: center;
   padding: 24px;
   margin-bottom: 28px;
   box-shadow: var(--shadow-soft);
 }
+
+/* BUTTON */
 
 .contact-button {
   display: inline-block;
@@ -329,10 +334,32 @@ hr {
   text-decoration: none;
 }
 
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .artist-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .artist-portrait {
+    width: 180px;
+  }
+
+  .hero-section {
+    padding: 60px 18px 55px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.4rem;
+  }
+}
+
 
 /* =========================================================
    5. CARD / GRID LAYOUTS (HOMEPAGE)
 ========================================================= */
+
 .container {
   margin-top: 28px;
 }
@@ -353,9 +380,9 @@ hr {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
- transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-   
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
@@ -366,16 +393,16 @@ hr {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-   transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-   .card:hover img {
+.card:hover img {
   transform: scale(1.03);
   filter: brightness(1.05) contrast(1.05);
 }
 
-.card > h3,
-.card > p {
+.card h3,
+.card p {
   padding-left: 18px;
   padding-right: 18px;
 }
@@ -387,13 +414,27 @@ hr {
 }
 
 .card p {
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
 }
 
 
 /* =========================================================
    6. STORY / POETRY CARD GRID
 ========================================================= */
+
 .story-intro {
   text-align: center;
   max-width: 760px;
@@ -415,7 +456,7 @@ hr {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-decoration: none;
   color: inherit;
 }
@@ -430,6 +471,11 @@ hr {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+  transition: transform 0.35s ease;
+}
+
+.story-card:hover img {
+  transform: scale(1.02);
 }
 
 .story-card-content {
@@ -444,7 +490,7 @@ hr {
 }
 
 .story-card p {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: var(--text-main);
   line-height: 1.7;
   font-size: 1rem;
@@ -455,10 +501,33 @@ hr {
   color: var(--link);
   font-weight: 600;
   margin-top: 6px;
+  transition: color 0.2s ease;
+}
+
+.story-card:hover .story-cta {
+  color: var(--link-hover);
 }
 
 .arrow {
   margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.story-card:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .story-card h3 {
+    font-size: 1.25rem;
+  }
 }
 
 
@@ -585,11 +654,14 @@ hr {
   background: rgba(255, 255, 255, 0.75);
   color: var(--text-heading);
   font-size: 1rem;
+   text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .turn-link:hover {
   background: var(--bg-soft);
-  text-decoration: none;
+   text-decoration: none;
+ transform: translateY(-2px);
 }
 
 .swipe-note {
@@ -597,6 +669,30 @@ hr {
   color: var(--text-soft);
   font-size: 0.98rem;
   margin: 10px 0 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .page-spread {
+    grid-template-columns: 1fr;
+  }
+
+  .page-images.two-images {
+    grid-template-columns: 1fr;
+  }
+
+  .story-page {
+    padding: 20px;
+  }
+
+  .cover-title {
+    font-size: 2rem;
+  }
+
+  .page-text {
+    font-size: 1.08rem;
+  }
 }
 
 
@@ -710,6 +806,7 @@ hr {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  display: block;
 }
 
 .archive-item-content {
@@ -758,8 +855,25 @@ hr {
   object-fit: contain;
 }
 
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .archive-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .quote {
+    padding: 16px 18px;
+  }
+
+  .archive-caption {
+    max-width: 260px;
+  }
+}
+
 /* =========================================================
-   POETRY LANDING PAGE + COLLECTION PAGE
+   9. POETRY LANDING PAGE + COLLECTION PAGE
 ========================================================= */
 
 .poetry-collection {
