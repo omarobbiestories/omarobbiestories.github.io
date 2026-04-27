@@ -38,6 +38,15 @@
   --max-page: 1000px;
   --max-narrow: 820px;
   --max-wide: 1200px;
+
+   /* Spacing rhythm */
+--space-xs: 8px;
+--space-sm: 12px;
+--space-md: 20px;
+--space-lg: 32px;
+--space-xl: 48px;
+--space-xxl: 64px;
+   
   --transition-soft: all 0.25s ease;   /* Optional future-proof variables */
 }
 
@@ -314,7 +323,7 @@ hr {
   background-size: cover;
   background-position: center;
   padding: 24px;
-  margin-bottom: 28px;
+ margin-bottom: var(--space-lg);
   box-shadow: var(--shadow-soft);
 }
 
