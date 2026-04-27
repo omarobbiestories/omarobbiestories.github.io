@@ -188,15 +188,44 @@ hr {
 
 .hero {
   text-align: center;
-  padding: 60px 20px 40px;
-  margin-bottom: 30px;
+  position: relative;
+  padding: 80px 20px 70px;
+  margin-bottom: 40px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  background:
+    linear-gradient(rgba(246, 248, 243, 0.82), rgba(246, 248, 243, 0.96)),
+    url("images/poetry.jpg"); /* swap this later for your best artwork */
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  color: var(--text-subtle);
+  margin-bottom: 18px;
+}
+
+.hero-line {
+  font-size: 1.15rem;
+  color: var(--text-soft);
+  max-width: 520px;
+  margin: 0 auto;
+}
    
 .hero h1 {
   color: var(--text-heading);
-  font-size: 3.2rem;
-   letter-spacing: 0.5px;
-   margin: 0 0 10px;
+   font-size: 3.3rem;
   line-height: 1.15;
+  margin-bottom: 10px;
+   letter-spacing: 0.5px;
 }
 
 .hero p {
