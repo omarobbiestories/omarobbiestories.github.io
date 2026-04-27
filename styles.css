@@ -10,9 +10,6 @@
 ========================================================= */
 
 
-/* =========================================================
-   1. ROOT VARIABLES
-========================================================= */
 :root {
   --bg-main: #f6f8f3;
   --bg-soft: #edf2e8;
@@ -41,6 +38,7 @@
   --max-page: 1000px;
   --max-narrow: 820px;
   --max-wide: 1200px;
+  --transition-soft: all 0.25s ease;   /* Optional future-proof variables */
 }
 
 
@@ -66,6 +64,7 @@ body {
   padding: 0 18px;
   font-size: 1.1rem;
   line-height: 1.85;
+  overflow-wrap: break-word;
 }
 
 img {
@@ -109,6 +108,12 @@ hr {
   color: var(--text-subtle);
   font-size: 1.08rem;
   line-height: 1.5;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 .page-title {
@@ -130,7 +135,7 @@ hr {
   text-align: center;
   color: var(--text-subtle);
   font-size: 1.05rem;
-  margin: -10px 0 22px;
+  margin: -4px 0 22px;
 }
 
 .intro {
@@ -935,7 +940,7 @@ hr {
   }
 }
 /* =========================================================
-   COMING SOON CARD (POETRY)
+   10. COMING SOON CARD (POETRY)
 ========================================================= */
 
 .coming-soon-card {
@@ -945,17 +950,17 @@ hr {
 
 .coming-soon-card:hover {
   transform: none;
-  box-shadow: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .coming-soon-card img {
   filter: grayscale(20%);
 }
 
-
 /* =========================================================
-   9. GENERIC IMAGE GALLERIES
+   11. GENERIC IMAGE GALLERIES
 ========================================================= */
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -967,30 +972,44 @@ hr {
   width: 100%;
   border-radius: var(--radius-md);
   object-fit: cover;
+  display: block;
+transition: transform 0.25s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.01);
 }
 
 .single-image img {
   width: 100%;
   border-radius: var(--radius-md);
   object-fit: contain;
+  display: block;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 
 /* =========================================================
-   10. FOOTER / SMALL NOTES
+   12. FOOTER / SMALL NOTES
 ========================================================= */
-.page-footer {
-  text-align: center;
-  color: var(--text-soft);
-  font-size: 0.98rem;
-  margin: 3rem 0 2rem;
-}
 
 .footer {
   text-align: center;
   font-size: 0.98rem;
   margin: 3rem 0 2rem;
   color: var(--text-soft);
+}
+
+.page-footer {
+  margin-top: 3rem;
 }
 
 .coming-soon {
@@ -1000,19 +1019,24 @@ hr {
   font-style: italic;
 }
 
-
 /* =========================================================
-   11. TABLET
+   13. TABLET
 ========================================================= */
+
 @media (max-width: 900px) {
+
   body {
     font-size: 1.08rem;
     line-height: 1.82;
   }
 
-  .hero h1 {
+  .hero-section h1 {
     font-size: 2.6rem;
   }
+   
+   .hero-section {
+  padding: 65px 18px 60px;
+}
 
   .page-title {
     font-size: 2.35rem;
@@ -1038,10 +1062,10 @@ hr {
   }
 }
 
-
 /* =========================================================
-   12. MOBILE
+   14. MOBILE
 ========================================================= */
+
 @media (max-width: 640px) {
   body {
     margin: 18px auto;
@@ -1055,11 +1079,11 @@ hr {
     margin-bottom: 18px;
   }
 
-  .hero h1 {
+  .hero-section h1 {
     font-size: 2.35rem;
   }
 
-  .hero p {
+  .hero-section p {
     font-size: 1.18rem;
   }
 
@@ -1132,8 +1156,9 @@ hr {
 
 
 /* =========================================================
-   13. VERY SMALL MOBILE
+   15. VERY SMALL MOBILE
 ========================================================= */
+
 @media (max-width: 420px) {
   body {
     padding: 0 12px;
@@ -1144,7 +1169,11 @@ hr {
     font-size: 1.2rem;
   }
 
-  .hero h1 {
+   .hero-section {
+  padding: 50px 16px 45px;
+}
+
+  .hero-section h1 {
     font-size: 2.1rem;
   }
 
@@ -1165,7 +1194,7 @@ hr {
 
 
 /* =========================================================
-   14. AUTOBIOGRAPHY / LONG-FORM READING
+   16. AUTOBIOGRAPHY / LONG-FORM READING
 ========================================================= */
 
 .autobio-page {
@@ -1177,6 +1206,7 @@ hr {
   text-align: justify;
   max-width: 660px;
   margin: 0 auto 1.4em;
+    line-height: 1.85;
 }
 
 .chapter-heading {
@@ -1203,9 +1233,16 @@ hr {
   margin-bottom: 1.3em;
 }
 
+/* MOBILE READABILITY */
+
+@media (max-width: 700px) {
+  .autobio-page p {
+    text-align: left; /* better readability on small screens */
+  }
+}
 
 /* =========================================================
-   15. AUTOBIOGRAPHY TITLE PAGE
+   17. AUTOBIOGRAPHY TITLE PAGE
 ========================================================= */
 
 .title-page {
@@ -1238,7 +1275,7 @@ hr {
 .title-divider {
   width: 60px;
   height: 2px;
-  background: var(--border-soft);
+  background: rgba(120, 135, 115, 0.4);
   margin: 20px auto;
 }
 
@@ -1249,8 +1286,24 @@ hr {
   font-style: italic;
 }
 
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .book-title {
+    font-size: 2.3rem;
+  }
+
+  .book-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .book-author {
+    font-size: 1.15rem;
+  }
+}
+
 /* =========================================================
-   TABLE OF CONTENTS (CLICKABLE NAV)
+   18. TABLE OF CONTENTS (CLICKABLE NAV)
 ========================================================= */
 
 .toc {
@@ -1275,17 +1328,24 @@ hr {
 
 .toc li {
   margin-bottom: 10px;
+  padding-left: 6px;
+  border-left: 2px solid rgba(90, 110, 90, 0.15);
 }
 
 .toc a {
   color: var(--link);
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .toc a:hover {
   text-decoration: underline;
   opacity: 0.75;
 }
+
+/* =========================================================
+   YOUTUBE FEATURE
+========================================================= */
 
 .youtube-feature {
   text-align: center;
@@ -1296,24 +1356,25 @@ hr {
   display: inline-block;
   margin-top: 0.6rem;
   font-size: 1.05rem;
-  color: #5f7d65;
+  color: var(--link); /* changed from hardcoded */
   text-decoration: none;
   border-bottom: 1px solid rgba(95, 125, 101, 0.4);
   transition: all 0.25s ease;
 }
 
 .youtube-feature a:hover {
-  color: #7f9a85;
-  border-bottom-color: #7f9a85;
+  color: var(--link-hover); /* keeps consistency */
+  border-bottom-color: var(--link-hover);
 }
 
 
 /* =========================================================
-   CHECK / VERIFY HIGHLIGHT
+   19. CHECK / VERIFY HIGHLIGHT
 ========================================================= */
 
 .check {
-  background: #fff3cd;
-  border-bottom: 2px dashed #e0a800;
-  padding: 0 2px;
+  background: rgba(255, 243, 205, 0.6);
+  border-bottom: 2px dashed rgba(224, 168, 0, 0.7);
+  padding: 0 3px;
+  border-radius: 3px;
 }
