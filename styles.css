@@ -188,28 +188,33 @@ hr {
 
 .hero {
   text-align: center;
-  padding: 18px 0 10px;
-}
-
+  padding: 60px 20px 40px;
+  margin-bottom: 30px;
+   
 .hero h1 {
   color: var(--text-heading);
-  font-size: 3rem;
-  margin: 0 0 10px;
+  font-size: 3.2rem;
+   letter-spacing: 0.5px;
+   margin: 0 0 10px;
   line-height: 1.15;
 }
 
 .hero p {
   color: var(--text-subtle);
-  font-size: 1.3rem;
-  margin: 0 0 24px;
+   font-size: 1.35rem;
+  max-width: 600px;
+  margin: 0 auto 24px;
 }
 
 .intro-section {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.55);
   border: 1px solid var(--border-muted);
-  border-radius: var(--radius-md);
-  padding: 24px 24px 20px;
-  margin-bottom: 32px;
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  margin-bottom: 36px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(6px);
 }
 
 .intro-subtitle {
@@ -233,9 +238,12 @@ hr {
 }
 
 .about {
-  background: rgba(255, 255, 255, 0.6);
+  background:  linear-gradient(rgba(246, 248, 243, 0.85), rgba(246, 248, 243, 0.95)),
+ url("images/your-hero-image.jpg");
   border: 1px solid var(--border-muted);
   border-radius: var(--radius-lg);
+   background-size: cover;
+  background-position: center;
   padding: 24px;
   margin-bottom: 28px;
   box-shadow: var(--shadow-soft);
@@ -284,12 +292,12 @@ hr {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+ transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
+   
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
@@ -297,6 +305,12 @@ hr {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+   transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+   .card:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.05) contrast(1.05);
 }
 
 .card > h3,
