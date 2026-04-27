@@ -235,6 +235,38 @@ hr {
   margin: 0 auto 24px;
 }
 
+.artist-intro {
+  max-width: 900px;
+  margin: 3rem auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 250, 244, 0.75);
+  border-radius: 22px;
+}
+
+.artist-portrait {
+  width: 220px;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(70, 55, 45, 0.18);
+}
+
+.artist-text {
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .artist-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .artist-portrait {
+    width: 180px;
+  }
+}
+
 .intro-section {
   background: rgba(255, 255, 255, 0.55);
   border: 1px solid var(--border-muted);
