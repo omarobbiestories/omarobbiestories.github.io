@@ -185,6 +185,12 @@ hr {
   text-align: center;
 }
 
+.text-section p {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* =========================================================
    4. INDEX / HOME PAGE
