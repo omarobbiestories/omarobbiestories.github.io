@@ -185,7 +185,6 @@ hr {
   text-align: center;
 }
 
-}
 .text-section p {
   max-width: 660px;
   margin: 0 auto 1.2em;
@@ -621,6 +620,18 @@ hr {
   border-radius: var(--radius-md);
   object-fit: contain;
   background: var(--bg-muted);
+}
+
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.image-card img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-md);
 }
 
 .story-caption {
@@ -1075,6 +1086,7 @@ transition: transform 0.25s ease;
   }
 }
 
+
 /* =========================================================
    14. MOBILE
 ========================================================= */
@@ -1131,6 +1143,11 @@ transition: transform 0.25s ease;
 
   .page-images.two-images {
     grid-template-columns: 1fr;
+  }
+
+  .image-pair {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .cover-title {
