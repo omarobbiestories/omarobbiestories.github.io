@@ -667,40 +667,6 @@ hr {
   margin-bottom: 20px;
 }
 
-.spread-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-top: 22px;
-  flex-wrap: wrap;
-}
-
-.turn-link {
-  display: inline-block;
-  padding: 10px 14px;
-  border: 1px solid var(--border-soft);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.75);
-  color: var(--text-heading);
-  font-size: 1rem;
-   text-decoration: none;
-  transition: background 0.25s ease, transform 0.25s ease;
-}
-
-.turn-link:hover {
-  background: var(--bg-soft);
-   text-decoration: none;
- transform: translateY(-2px);
-}
-
-.swipe-note {
-  text-align: center;
-  color: var(--text-soft);
-  font-size: 0.98rem;
-  margin: 10px 0 20px;
-}
-
 /* MOBILE */
 
 @media (max-width: 800px) {
