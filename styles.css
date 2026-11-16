@@ -1320,6 +1320,7 @@ transition: transform 0.25s ease;
 .toc ul {
   list-style: none;
   padding: 0;
+  margin-left: 0;
 }
 
 .toc li {
