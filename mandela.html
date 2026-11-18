@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mandela Effect | Oma Robbie Stories</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .lightbox-trigger {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: zoom-in;
+    }
+    .lightbox-trigger:focus-visible {
+      outline: 3px solid #254932;
+      outline-offset: -4px;
+    }
+    #archive-lightbox {
+      box-sizing: border-box;
+      width: max-content;
+      max-width: calc(100% - 24px);
+      max-height: calc(100% - 24px);
+      padding: 12px;
+      border: 0;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+    #archive-lightbox::backdrop { background: rgba(0, 0, 0, 0.82); }
+    #archive-lightbox img {
+      width: auto;
+      max-width: 100%;
+      max-height: 70dvh;
+      object-fit: contain;
+    }
+    #archive-lightbox button {
+      display: block;
+      margin: 0 0 8px auto;
+      padding: 6px 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+    #archive-lightbox p { margin: 8px 0 0; }
+  </style>
 </head>
 
 <body id="top">
@@ -415,15 +456,15 @@
           <strong>American Gothic:</strong> A 1930 oil painting by Grant Wood. Often remembered with the woman looking straight ahead and appearing older. <em>She now looks to the side and appears younger.</em>
           <div class="archive-grid">
             <div class="archive-item">
-              <img src="images/mandela/art-american-gothic-a.jpg" alt="American Gothic variation A" loading="lazy">
+              <button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge American Gothic variation A"><img src="images/mandela/art-american-gothic-a.jpg" alt="American Gothic variation A" loading="lazy"></button>
               <p class="archive-caption">Current version of artwork</p>
             </div>
             <div class="archive-item">
-              <img src="images/mandela/art-american-gothic-b.jpg" alt="American Gothic variation B" loading="lazy">
+              <button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge American Gothic variation B"><img src="images/mandela/art-american-gothic-b.jpg" alt="American Gothic variation B" loading="lazy"></button>
               <p class="archive-caption">Remembered version of artwork pose</p>
             </div>
             <div class="archive-item">
-              <img src="images/mandela/art-american-gothic-c.jpg" alt="American Gothic variation C" loading="lazy">
+              <button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge American Gothic variation C"><img src="images/mandela/art-american-gothic-c.jpg" alt="American Gothic variation C" loading="lazy"></button>
               <p class="archive-caption">Remembered version of artwork pose</p>
             </div>
           </div>
@@ -432,17 +473,17 @@
         <li>
           <strong>The Creation of Adam</strong> (also known as <em>The Creation of Man</em>), a fresco by Michelangelo on the Sistine Chapel ceiling (1508–1512): Many remember Adam’s arm and finger reaching upward towards God. <em>Now, his hand appears lower, as if reaching down to meet God’s finger.</em>
           <div class="archive-grid">
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-a.jpg" alt="Creation of Man variation A" loading="lazy"><p class="archive-caption">Sistine Chapel</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-aa.jpg" alt="Creation of Man variation AA" loading="lazy"><p class="archive-caption">Sistine Chapel</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-g.jpg" alt="Creation of Man variation G" loading="lazy"><p class="archive-caption">Suggests a connection between God and the human brain.</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-c.jpg" alt="Creation of Man variation C" loading="lazy"><p class="archive-caption">Pose remembered by some</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-d.jpg" alt="Creation of Man variation D" loading="lazy"><p class="archive-caption">Fibonacci sequence</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-h.jpg" alt="Creation of Man variation H" loading="lazy"><p class="archive-caption">Advertisement imagery aligning with the remembered pose</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-i.jpg" alt="Creation of Man variation I" loading="lazy"><p class="archive-caption">Advertisement reflecting the remembered version</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-k.jpg" alt="Creation of Man variation K" loading="lazy"><p class="archive-caption">Advertisement imagery aligning with the remembered pose</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-l.jpg" alt="Creation of Man variation L" loading="lazy"><p class="archive-caption">Archived advertisement showing the ‘remembered’ version of the artwork</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-b.jpg" alt="Creation of Man variation B" loading="lazy"><p class="archive-caption">Two versions on album covers</p></div>
-            <div class="archive-item"><img src="images/mandela/art-creation-of-man-bb.jpg" alt="Creation of Man variation BB" loading="lazy"><p class="archive-caption">Muddy Waters album cover, 1969</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation A"><img src="images/mandela/art-creation-of-man-a.jpg" alt="Creation of Man variation A" loading="lazy"></button><p class="archive-caption">Sistine Chapel</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation AA"><img src="images/mandela/art-creation-of-man-aa.jpg" alt="Creation of Man variation AA" loading="lazy"></button><p class="archive-caption">Sistine Chapel</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation G"><img src="images/mandela/art-creation-of-man-g.jpg" alt="Creation of Man variation G" loading="lazy"></button><p class="archive-caption">Suggests a connection between God and the human brain.</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation C"><img src="images/mandela/art-creation-of-man-c.jpg" alt="Creation of Man variation C" loading="lazy"></button><p class="archive-caption">Pose remembered by some</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation D"><img src="images/mandela/art-creation-of-man-d.jpg" alt="Creation of Man variation D" loading="lazy"></button><p class="archive-caption">Fibonacci sequence</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation H"><img src="images/mandela/art-creation-of-man-h.jpg" alt="Creation of Man variation H" loading="lazy"></button><p class="archive-caption">Advertisement imagery aligning with the remembered pose</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation I"><img src="images/mandela/art-creation-of-man-i.jpg" alt="Creation of Man variation I" loading="lazy"></button><p class="archive-caption">Advertisement reflecting the remembered version</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation K"><img src="images/mandela/art-creation-of-man-k.jpg" alt="Creation of Man variation K" loading="lazy"></button><p class="archive-caption">Advertisement imagery aligning with the remembered pose</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation L"><img src="images/mandela/art-creation-of-man-l.jpg" alt="Creation of Man variation L" loading="lazy"></button><p class="archive-caption">Archived advertisement showing the ‘remembered’ version of the artwork</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation B"><img src="images/mandela/art-creation-of-man-b.jpg" alt="Creation of Man variation B" loading="lazy"></button><p class="archive-caption">Two versions on album covers</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Creation of Man variation BB"><img src="images/mandela/art-creation-of-man-bb.jpg" alt="Creation of Man variation BB" loading="lazy"></button><p class="archive-caption">Muddy Waters album cover, 1969</p></div>
           </div>
         </li>
 
@@ -453,8 +494,8 @@
         <li>
           <strong>The Last Supper</strong> by Leonardo da Vinci: Two separate memories: one, no glasses or bread on table and the Holy Grail was next to Jesus; two, there was not a ‘door-like’ structure under the table. <em>Now there are 13 glasses on the table, the Holy Grail is missing, and the mural was painted over a doorway in the refectory of the Convent of Santa Maria delle Grazie in Milan, Italy.</em>
           <div class="archive-grid">
-            <div class="archive-item"><img src="images/mandela/art-last-supper-b.jpg" alt="Last Supper variation B" loading="lazy"><p class="archive-caption">The Holy Grail is not on the table, and 13 wine glasses are now on the table.</p></div>
-            <div class="archive-item"><img src="images/mandela/art-last-supper-a.jpg" alt="Last Supper variation A" loading="lazy"><p class="archive-caption">The closed ‘door-like’ section is part of the actual wall the mural was painted on.</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Last Supper variation B"><img src="images/mandela/art-last-supper-b.jpg" alt="Last Supper variation B" loading="lazy"></button><p class="archive-caption">The Holy Grail is not on the table, and 13 wine glasses are now on the table.</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge Last Supper variation A"><img src="images/mandela/art-last-supper-a.jpg" alt="Last Supper variation A" loading="lazy"></button><p class="archive-caption">The closed ‘door-like’ section is part of the actual wall the mural was painted on.</p></div>
           </div>
         </li>
 
@@ -465,15 +506,15 @@
         <li>
           <strong>The Thinker</strong> by Auguste Rodin: Remembered with the fist resting against the forehead. <em>Now more commonly depicted with the hand at the mouth or under the chin.</em>
           <div class="archive-grid">
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-a.jpg" alt="The Thinker variation A" loading="lazy"><p class="archive-caption">Current version</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-b.jpg" alt="The Thinker variation B" loading="lazy"><p class="archive-caption">Current version</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-c.jpg" alt="The Thinker variation C" loading="lazy"><p class="archive-caption">Current version: George Bernard Shaw in the pose of The Thinker</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-d.jpg" alt="The Thinker variation D" loading="lazy"><p class="archive-caption">Remembered version: George Bernard Shaw in the pose of The Thinker (1906)</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-e.jpg" alt="The Thinker variation E" loading="lazy"><p class="archive-caption">Remembered version in body-building poses</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-f.jpg" alt="The Thinker variation F" loading="lazy"><p class="archive-caption">Remembered version in a product description</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-g.jpg" alt="The Thinker variation G" loading="lazy"><p class="archive-caption">Remembered version in art</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-h.jpg" alt="The Thinker variation H" loading="lazy"><p class="archive-caption">Remembered version in people’s holiday photos</p></div>
-            <div class="archive-item"><img src="images/mandela/art-the-thinker-i.jpg" alt="The Thinker variation I" loading="lazy"><p class="archive-caption">Remembered version in people’s holiday photos</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation A"><img src="images/mandela/art-the-thinker-a.jpg" alt="The Thinker variation A" loading="lazy"></button><p class="archive-caption">Current version</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation B"><img src="images/mandela/art-the-thinker-b.jpg" alt="The Thinker variation B" loading="lazy"></button><p class="archive-caption">Current version</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation C"><img src="images/mandela/art-the-thinker-c.jpg" alt="The Thinker variation C" loading="lazy"></button><p class="archive-caption">Current version: George Bernard Shaw in the pose of The Thinker</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation D"><img src="images/mandela/art-the-thinker-d.jpg" alt="The Thinker variation D" loading="lazy"></button><p class="archive-caption">Remembered version: George Bernard Shaw in the pose of The Thinker (1906)</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation E"><img src="images/mandela/art-the-thinker-e.jpg" alt="The Thinker variation E" loading="lazy"></button><p class="archive-caption">Remembered version in body-building poses</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation F"><img src="images/mandela/art-the-thinker-f.jpg" alt="The Thinker variation F" loading="lazy"></button><p class="archive-caption">Remembered version in a product description</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation G"><img src="images/mandela/art-the-thinker-g.jpg" alt="The Thinker variation G" loading="lazy"></button><p class="archive-caption">Remembered version in art</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation H"><img src="images/mandela/art-the-thinker-h.jpg" alt="The Thinker variation H" loading="lazy"></button><p class="archive-caption">Remembered version in people’s holiday photos</p></div>
+            <div class="archive-item"><button type="button" class="lightbox-trigger" aria-haspopup="dialog" aria-label="Enlarge The Thinker variation I"><img src="images/mandela/art-the-thinker-i.jpg" alt="The Thinker variation I" loading="lazy"></button><p class="archive-caption">Remembered version in people’s holiday photos</p></div>
           </div>
         </li>
 
@@ -1450,5 +1491,39 @@
     </section>
   </main>
 
+
+  <dialog id="archive-lightbox" aria-label="Enlarged archive image">
+    <form method="dialog"><button autofocus>Close</button></form>
+    <img alt="">
+    <p></p>
+  </dialog>
+  <script>
+    const lightbox = document.querySelector('#archive-lightbox');
+    const fullImage = lightbox.querySelector('img');
+    const fullCaption = lightbox.querySelector('p');
+    let opener;
+
+    for (const button of document.querySelectorAll('.lightbox-trigger')) {
+      button.addEventListener('click', () => {
+        opener = button;
+        const thumbnail = button.querySelector('img');
+        fullImage.src = thumbnail.src;
+        fullImage.alt = thumbnail.alt;
+        fullCaption.textContent = button.nextElementSibling.textContent;
+        lightbox.showModal();
+      });
+    }
+
+    lightbox.addEventListener('click', (event) => {
+      const bounds = lightbox.getBoundingClientRect();
+      if (event.target === lightbox &&
+          (event.clientX < bounds.left || event.clientX > bounds.right ||
+           event.clientY < bounds.top || event.clientY > bounds.bottom)) {
+        lightbox.close();
+      }
+    });
+
+    lightbox.addEventListener('close', () => opener?.focus());
+  </script>
 </body>
 </html>
